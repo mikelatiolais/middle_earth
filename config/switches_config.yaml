@@ -1,0 +1,21 @@
+switches:
+
+  #MATRIX SWITCHES
+  #valid numbers are 1-0-32 through 1-0-95
+  s_launch_trigger:
+    number: 1-0-40
+  s_outhole:
+    number: 1-0-41
+  s_trough_1_left:
+    number: 1-0-42
+  s_trough_2_center:
+    number: 1-0-43
+  s_trough_3_right:
+    number: 1-0-44
+  s_shooter_lane:
+    number: 1-0-45
+  s_left_eos:
+    number: 1-0-46
+  s_right_eos:
+    number: 1-0-47
+
