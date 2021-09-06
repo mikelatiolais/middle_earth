@@ -4,15 +4,26 @@ switches:
 
   #DIRECT SWITCHES
   #switch numbers are labelled in silkscreen on the board
-  #s_left_flipper:
-  #  number: 0-0-27
-  #  tags: left_flipper
-  #s_right_flipper:
-  #  number: 0-0-26
-  #  tags: right_flipper
-  #s_startButton:
-  #  number: 0-0-25
-  #  tags: start
+  s_left_flipper:
+    number: 0-0-27
+    tags: left_flipper
+  s_right_flipper:
+    number: 0-0-26
+    tags: right_flipper
+  s_start_button:
+    number: 0-0-25
+    tags: start
+  s_test_switch:
+    number: 0-0-24
+  s_tilt_bob:
+    number: 0-0-16
+  s_coin_up:
+    number: 0-0-17
+  
+  
+
+
+
   s_outhole_kicker:
     number: 0-0-1
   s_right_sling:

@@ -52,13 +52,17 @@ autofire_coils:
   #Add your autofire cofigs for pops, slings, etc.
 
 
-ball_devices:
-  #Add your ball devices
-
-
 playfields:
   #Define your playfields
+  playfield:
+    default_source_device: shooter_lane
+    tags: default
 
+ball_devices:
+  shooter_lane:
+    ball_switches: s_outhole_kicker
+    eject_coil: c_plunger_lane
+    player_controlled_eject_event: sw_plunger
 
 machine:
   balls_installed: 3 #How many balls are physically in your game

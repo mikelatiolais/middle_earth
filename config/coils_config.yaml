@@ -9,7 +9,7 @@ coils:
     default_hold_power: 1.0
     default_pulse_ms: 50
   c_flipper_left:
-    number: 0-0-1
+    number: 0-0-2
     allow_enable: true
     default_hold_power: 1.0
     default_pulse_ms: 50
@@ -21,6 +21,11 @@ coils:
     number: 0-0-4
     allow_enable: true
     default_hold_power: 1.0
+  c_plunger_lane:
+    number: 0-0-5
+    label:
+    tags:
+    default_pulse_ms: 25
 
 autofire_coils:
   left_slingshot:
