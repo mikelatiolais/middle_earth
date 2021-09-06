@@ -9,7 +9,7 @@ hardware:
 
 opp:
   #Use the USB ports defined by your OS for the two STM32 boards
-  ports: /dev/ttyACM0, /dev/ttyACM1, /dev/ttyACM2
+  ports: /dev/ttyACM0, /dev/ttyACM1
   #USING SERIAL NUMBERS INSTEAD OF CHAINS
   #  Board 0 has serial number 0, Board 1 has serial number 1.
   #  This is convenient if your OS tends to reassign the serial port.
@@ -42,9 +42,7 @@ psus:
 #  config section here      
 config:
   - switches_config.yaml
-
-coils:
-  #coil numbers are labelled in silkscreen on the board
+  - coils_config.yaml
 
 flippers:
   #Add your flipper config
