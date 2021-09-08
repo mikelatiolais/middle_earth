@@ -17,10 +17,12 @@ coils:
     number: 0-0-3
     allow_enable: true
     default_hold_power: 1.0
+    enable_events: machine_reset_phase_3
   c_right_slingshot:
     number: 0-0-4
     allow_enable: true
     default_hold_power: 1.0
+    enable_events: machine_reset_phase_3
   c_plunger_lane:
     number: 0-0-5
     label:
