@@ -7,48 +7,62 @@ switches:
 
   # Satellite board
   # Cabinet Switches
-  s_left_flipper:
-    number: 3-0-16
-    tags: left_flipper
-  s_right_flipper:
-    number: 3-0-17
-    tags: right_flipper
-  s_start_button:
-    number: 3-0-10
-    tags: start
-  s_test:
-    number: 3-0-1
-  s_volume_down:
-    number: 3-0-2
-  s_volume_up:
-    number: 3-0-3
-  s_coin:
-    number: 3-0-11
-  s_tilt_cab:
-    number: 3-0-8
-  s_tilt_bob:
-    number: 3-0-9
+  #s_left_flipper:
+  #  number: 3-0-16
+  #  tags: left_flipper
+  #s_right_flipper:
+  #  number: 3-0-17
+  #  tags: right_flipper
+  #s_start_button:
+  #  number: 3-0-10
+  #  tags: start
+  #s_test:
+  #  number: 3-0-1
+  #s_volume_down:
+  #  number: 3-0-2
+  #s_volume_up:
+  #  number: 3-0-3
+  #s_coin:
+  #  number: 3-0-11
+  #s_tilt_cab:
+  #  number: 3-0-8
+  #s_tilt_bob:
+  #  number: 3-0-9
   
   # Main cobrapin board
   # Playfield switches
-  # Bank
+  # Bank J2
+  s_right_drain_rollover:
+    number: 0-0-27
   s_outhole_kicker:
-    number: 0-0-17
+    number: 0-0-26
   s_right_sling:
-    number: 0-0-18
+    number: 0-0-25
     tags: sling
   s_left_sling:
-    number: 0-0-19
+    number: 0-0-24
     tags: sling
   s_left_drain_rollover:
-    number: 0-0-8
+    number: 0-0-19
   s_left_lower_pf_rollover:
-    number: 0-0-9
+    number: 0-0-18
   s_right_lower_pf_rollover:
-    number: 0-0-10
+    number: 0-0-17
   s_lower_inner_lane_rollover:
-    number: 0-0-11
+    number: 0-0-16
 
-  # Bank
+  # Bank J1
   s_lower_drop_1:
-    number: 
+    number: 0-0-1
+  s_lower_drop_2:
+    number: 0-0-2
+  s_lower_drop_3:
+    number: 0-0-3
+  s_lower_drop_4:
+    number: 0-0-8
+  s_lower_drop_5:
+    number: 0-0-9
+  s_left_bumper:
+    number: 0-0-10
+  s_behind_drops:
+    number: 0-0-11
