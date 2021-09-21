@@ -15,14 +15,10 @@ coils:
     default_pulse_ms: 50
   c_left_slingshot:
     number: 0-0-3
-    allow_enable: true
-    default_pulse_ms: 20.0
-    enable_events: machine_reset_phase_3
+    default_pulse_ms: 15
   c_right_slingshot:
     number: 0-0-4
-    allow_enable: true
-    default_pulse_ms: 20.0
-    enable_events: machine_reset_phase_3
+    default_pulse_ms: 15
   c_plunger_lane:
     number: 0-0-5
     label:
@@ -33,6 +29,8 @@ autofire_coils:
   left_slingshot:
     coil: c_left_slingshot
     switch: s_left_sling
+    enable_events: machine_reset_phase_3
   right_slingshot:
     coil: c_right_slingshot
     switch: s_right_sling
+    enable_events: machine_reset_phase_3
