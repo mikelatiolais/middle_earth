@@ -66,3 +66,43 @@ switches:
     number: 0-0-10
   s_behind_drops:
     number: 0-0-11
+
+  # Bank J3
+  s_right_bumper:
+    number: 1-0-1
+  s_upper_right_target:
+    number: 1-0-2
+  s_upper_left_target:
+    number: 1-0-3
+
+  # Bank J4
+  s_right_spinner:
+    number: 1-0-24
+  s_upper_drop_1:
+    number: 1-0-25
+  s_upper_drop_2:
+    number: 1-0-26
+  s_upper_drop_3:
+    number: 1-0-27
+  s_upper_drop_4:
+    number: 1-0-28
+  s_upper_drop_5:
+    number: 1-0-29
+  s_left_upper_rollover:
+    number: 1-0-30
+  s_right_upper_rollover:
+    number: 1-0-31
+
+  # Bank J5
+  s_10_pt:
+    number: 1-0-16
+  s_left_spinner:
+    number: 1-0-17
+  s_lower_left_target:
+    number: 1-0-18
+  s_lower_middle_target:
+    number: 1-0-19
+  s_target_front_rollover:
+    number: 1-0-20
+  s_rollthru_rollover:
+    number: 1-0-21
