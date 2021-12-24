@@ -3,27 +3,42 @@
 coils:
 
   # Coils
-  c_flipper_right:
-    number: 1-0-1
-    allow_enable: true
-    default_hold_power: 1.0
-    default_pulse_ms: 50
-  c_flipper_left:
-    number: 1-0-7
-    allow_enable: true
-    default_hold_power: 1.0
-    default_pulse_ms: 50
-  c_left_slingshot:
-    number: 0-0-10
-    default_pulse_ms: 15
+  # Main cobrapin - Bank B
   c_right_slingshot:
-    number: 0-0-0
+    number: 0-0-1
     default_pulse_ms: 15
-  c_plunger_lane:
+  c_left_slingshot:
+    number: 0-0-2
+    default_pulse_ms: 15
+  c_left_bumper:
+    number: 0-0-7
+
+  # Main cobrapin - Bank C
+  c_right_bumper:
+    number: 1-0-1
+  c_right_drop_reset:
+    number: 1-0-2
+  c_left_drop_reset:
+    number: 1-0-3
+  c_ball_eject:
     number: 1-0-4
     label:
     tags:
     default_pulse_ms: 25
+
+  # Satellite Board
+  c_flipper_right:
+    number: 3-0-1
+    allow_enable: true
+    default_hold_power: 1.0
+    default_pulse_ms: 50
+  c_flipper_left:
+    number: 3-0-2
+    allow_enable: true
+    default_hold_power: 1.0
+    default_pulse_ms: 50
+  c_knocker:
+    number: 3-0-3
 
 autofire_coils:
   left_slingshot:
@@ -33,4 +48,12 @@ autofire_coils:
   right_slingshot:
     coil: c_right_slingshot
     switch: s_right_sling
+    enable_events: machine_reset_phase_3
+  left_bumper:
+    coil: c_left_bumper
+    switch: s_left_bumper
+    enable_events: machine_reset_phase_3
+  right_bumper:
+    coil: c_right_bumper
+    switch: s_right_bumper
     enable_events: machine_reset_phase_3

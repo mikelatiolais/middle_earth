@@ -66,8 +66,8 @@ ball_devices:
     player_controlled_eject_event: sw_plunger
 
 machine:
-  balls_installed: 3 #How many balls are physically in your game
-  min_balls: 3 #How few balls can be accounted for before you can start a game
+  balls_installed: 1 #How many balls are physically in your game
+  min_balls: 1 #How few balls can be accounted for before you can start a game
 
 
 game:
@@ -77,8 +77,8 @@ game:
 
 modes:
   #Add all your mode names here
-  #- attract
-  #- base
+  - attract
+  - base
   #- etc
 
 
