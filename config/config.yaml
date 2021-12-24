@@ -9,7 +9,7 @@ hardware:
 
 opp:
   #Use the USB ports defined by your OS for the two STM32 boards
-  ports: /dev/ttyACM0, /dev/ttyACM1
+  ports: /dev/ttyACM0, /dev/ttyACM1, /dev/ttyACM2
   #USING SERIAL NUMBERS INSTEAD OF CHAINS
   #  Board 0 has serial number 0, Board 1 has serial number 1.
   #  This is convenient if your OS tends to reassign the serial port.
@@ -27,6 +27,7 @@ opp:
   #chains:
      #0: /dev/ttyACM0
      #1: /dev/ttyACM1
+     #3: /dev/ttyACM2
 
 
 psus:
