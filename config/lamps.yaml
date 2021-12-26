@@ -1,5 +1,7 @@
 #config_version=5
 
+# GI will be hardwired to 5v
+# Inserts will be RGB led strands
 lights:
   # Neopixel line 0
   l_upper_right_250:
