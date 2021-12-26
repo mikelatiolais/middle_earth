@@ -44,6 +44,7 @@ psus:
 config:
   - switches_config.yaml
   - coils_config.yaml
+  - lamps.yaml
 
 flippers:
   #Add your flipper config

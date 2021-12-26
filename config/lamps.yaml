@@ -1,0 +1,14 @@
+#config_version=5
+
+lights:
+  # Neopixel line 0
+  l_upper_right_250:
+    number: 0-0-0
+    subtype: led
+    tags:
+  l_upper_left_250:
+    number: 0-0-1
+    subtype: led
+    tags:
+  
+
