@@ -47,23 +47,26 @@ config:
 
 flippers:
   #Add your flipper config
-
-
-autofire_coils:
-  #Add your autofire cofigs for pops, slings, etc.
-
-
-playfields:
-  #Define your playfields
-  playfield:
-    default_source_device: shooter_lane
-    tags: default
+  left_flipper:
+    main_coil: c_flipper_left
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_flipper_right
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
 
 ball_devices:
-  shooter_lane:
+  bd_drain:
     ball_switches: s_outhole_kicker
     eject_coil: c_plunger_lane
+    tags: drain, home, trough
     player_controlled_eject_event: sw_plunger
+
+playfields:
+  playfield:
+    default_source_device: bd_drain
+    tags: default
 
 machine:
   balls_installed: 1 #How many balls are physically in your game
@@ -77,13 +80,27 @@ game:
 
 modes:
   #Add all your mode names here
-  - attract
-  - base
+  #- attract
+  #- base
   #- etc
 
 
 keyboard:   #use to drive your game from the computer for testing
-  z:
-    switch: s_left_eos
-  "/":
-    switch: s_right_eos
+  #z:
+  #  switch: s_left_eos
+  #"/":
+  #  switch: s_right_eos
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!!
+
+slide_player:
+  init_done: welcome_slide
