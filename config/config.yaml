@@ -50,11 +50,9 @@ flippers:
   left_flipper:
     main_coil: c_flipper_left
     activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3
   right_flipper:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
 
 ball_devices:
   bd_drain:
@@ -62,6 +60,7 @@ ball_devices:
     eject_coil: c_plunger_lane
     tags: drain, home, trough
     player_controlled_eject_event: sw_plunger
+    debug: true
 
 playfields:
   playfield:
@@ -104,3 +103,7 @@ slides:
 
 slide_player:
   init_done: welcome_slide
+  ball_started:
+    widgets:
+      type: text
+      text: PLAYER (number) BALL (ball)
