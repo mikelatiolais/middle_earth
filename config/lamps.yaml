@@ -4,12 +4,32 @@
 # Inserts will be RGB led strands
 lights:
   # Neopixel line 0
-  l_upper_right_250:
+  l_top_right_200:
     number: 0-0-0
     subtype: led
     tags:
-  l_upper_left_250:
+  l_top_left_200:
     number: 0-0-1
+    subtype: led
+    tags:
+  l_triple_bonus:
+    number: 0-0-2
+    subtype: led
+    tags:
+  l_bonus_rollover:
+    number: 0-0-3
+    subtype: led
+    tags:
+  l_double_bonus:
+    number: 0-0-4
+    subtype: led
+    tags:
+  l_upper_left_200:
+    number: 0-0-5
+    subtype: led
+    tags:
+  l_lower_left_200:
+    number: 0-0-6
     subtype: led
     tags:
   
