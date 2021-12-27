@@ -1,0 +1,6 @@
+2021-12-26 16:24:50,805 : INFO : root : Loading config.
+2021-12-26 16:24:50,812 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2021-12-26 16:24:50,812 : WARNING : ConfigProcessor : Cache file not found: /tmp/8be1a95677248c3712e90e720ca0ab79.mpf_cache
+2021-12-26 16:24:50,813 : INFO : ConfigProcessor : Loading config from file /usr/local/lib/python3.6/dist-packages/mpf/mpfconfig.yaml.
+2021-12-26 16:24:50,965 : INFO : ConfigProcessor : Loading config: /usr/local/lib/python3.6/dist-packages/mpf/mpfconfig.yaml
+2021-12-26 16:24:50,966 : INFO : ConfigProcessor : Loading config from file /home/mlatiolais/pinball/middle_earth/monitor/config/config.yaml.

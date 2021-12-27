@@ -74,7 +74,7 @@ switches:
     tags: playfield_active
   s_left_bumper:
     number: 0-0-10
-    tags: playfield_active
+    tags: 
   s_behind_drops:
     number: 0-0-11
     tags: playfield_active
@@ -82,7 +82,7 @@ switches:
   # Bank J3
   s_right_bumper:
     number: 1-0-1
-    tags: playfield_active
+    tags:
   s_upper_right_target:
     number: 1-0-2
     tags: playfield_active

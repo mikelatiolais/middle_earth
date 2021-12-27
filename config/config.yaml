@@ -44,7 +44,7 @@ psus:
 config:
   - switches_config.yaml
   - coils_config.yaml
-  - lamps.yaml
+  - lamps_config.yaml
 
 flippers:
   #Add your flipper config
@@ -58,9 +58,9 @@ flippers:
 ball_devices:
   bd_drain:
     ball_switches: s_outhole_kicker
-    eject_coil: c_plunger_lane
+    eject_coil: c_ball_eject
     tags: drain, home, trough
-    player_controlled_eject_event: sw_plunger
+    player_controlled_eject_event: s_start_button
     debug: true
 
 playfields:
@@ -70,7 +70,7 @@ playfields:
 
 machine:
   balls_installed: 1 #How many balls are physically in your game
-  min_balls: 1 #How few balls can be accounted for before you can start a game
+  min_balls: 0 #How few balls can be accounted for before you can start a game
 
 
 game:
@@ -81,13 +81,17 @@ game:
 modes:
   #Add all your mode names here
   #- attract
-  #- base
+  - base
   #- etc
 
 
 keyboard:   #use to drive your game from the computer for testing
-  #z:
-  #  switch: s_left_eos
+  s:
+    switch: s_start_button
+  w:
+    switch: s_10_pt
+  o:
+    switch: s_outhole_kicker
   #"/":
   #  switch: s_right_eos
 
