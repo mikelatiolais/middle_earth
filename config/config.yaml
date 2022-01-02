@@ -80,7 +80,7 @@ game:
 
 modes:
   #Add all your mode names here
-  #- attract
+  - attract
   - base
   #- etc
 
@@ -100,15 +100,41 @@ displays:
     width: 800
     height: 600
 
-slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!!
+#slides:
+  #welcome_slide:
+    #widgets:
+    #  - type: text
+    #    text: PINBALL!!
 
-slide_player:
-  init_done: welcome_slide
-  ball_started:
-    widgets:
-      type: text
-      text: PLAYER (number) BALL (ball)
+#slide_player:
+#  init_done: welcome_slide
+#  ball_started:
+#    widgets:
+#      type: text
+#      text: PLAYER (number) BALL (ball)
+sound_system:
+  tracks:
+    voice:
+      volume: 1
+      priority: 2
+      simultaneous_sounds: 1
+      preload: true
+    sfx:
+      volume: 1
+      priority: 1
+      preload: true
+      simultaneous_sounds: 7
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+
+assets:
+  sounds:
+    default:
+      load: on_demand
+    music:
+      track: music
+    sfx:
+      track: sfx
+    voice:
+      track: voice

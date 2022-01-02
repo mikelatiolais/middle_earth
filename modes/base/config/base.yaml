@@ -2,3 +2,13 @@
 mode:
   start_events: ball_started
   priority: 100
+
+sounds:
+  main_theme:
+    volume: 0.75
+    priority: 100
+
+sound_player:
+  mode_base_started:
+    main_theme:
+      loops: -1
