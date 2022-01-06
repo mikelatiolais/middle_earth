@@ -45,78 +45,21 @@ config:
   - switches_config.yaml
   - coils_config.yaml
   - lamps_config.yaml
-
-flippers:
-  #Add your flipper config
-  left_flipper:
-    main_coil: c_flipper_left
-    activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3 
-  right_flipper:
-    main_coil: c_flipper_right
-    activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
-
-ball_devices:
-  bd_drain:
-    ball_switches: s_outhole_kicker
-    eject_coil: c_ball_eject
-    tags: drain, home, trough
-    eject_timeouts: 3s
-    debug: true
-
-playfields:
-  playfield:
-    default_source_device: bd_drain
-    tags: default
+  - device_config.yaml
 
 machine:
   balls_installed: 1 #How many balls are physically in your game
-  min_balls: 0 #How few balls can be accounted for before you can start a game
-
+  min_balls: 1 #How few balls can be accounted for before you can start a game
 
 game:
   balls_per_game: 3
   max_players: 4
-
 
 modes:
   #Add all your mode names here
   - attract
   - base
   #- etc
-
-
-drop_targets:
-  l_first:
-    switch: s_lower_drop_1
-  l_second:
-    switch: s_lower_drop_2
-  l_third:
-    switch: s_lower_drop_3
-  l_fourth:
-    switch: s_lower_drop_4
-  l_fifth:
-    switch: s_lower_drop_5
-  u_first:
-    switch: s_upper_drop_1
-  u_second:
-    switch: s_upper_drop_2
-  u_third:
-    switch: s_upper_drop_3
-  u_fourth:
-    switch: s_upper_drop_4
-  u_fifth:
-    switch: s_upper_drop_5
-drop_target_banks:
-  upper_bank:
-    drop_targets: u_first, u_second, u_third, u_fourth, u_fifth
-    reset_coils: c_right_drop_reset
-    reset_on_complete: 1s
-  lower_bank:
-    drop_targets: l_first, l_second, l_third, l_fourth, l_fifth
-    reset_coils: c_left_drop_reset
-    reset_on_complete: 1s
 
 
 keyboard:   #use to drive your game from the computer for testing
@@ -138,18 +81,6 @@ displays:
     width: 800
     height: 600
 
-#slides:
-  #welcome_slide:
-    #widgets:
-    #  - type: text
-    #    text: PINBALL!!
-
-#slide_player:
-#  init_done: welcome_slide
-#  ball_started:
-#    widgets:
-#      type: text
-#      text: PLAYER (number) BALL (ball)
 sound_system:
   tracks:
     voice:
