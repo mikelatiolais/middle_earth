@@ -51,16 +51,18 @@ flippers:
   left_flipper:
     main_coil: c_flipper_left
     activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3 
   right_flipper:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
 
 ball_devices:
   bd_drain:
     ball_switches: s_outhole_kicker
     eject_coil: c_ball_eject
     tags: drain, home, trough
-    player_controlled_eject_event: s_start_button
+    eject_timeouts: 3s
     debug: true
 
 playfields:
@@ -85,6 +87,38 @@ modes:
   #- etc
 
 
+drop_targets:
+  l_first:
+    switch: s_lower_drop_1
+  l_second:
+    switch: s_lower_drop_2
+  l_third:
+    switch: s_lower_drop_3
+  l_fourth:
+    switch: s_lower_drop_4
+  l_fifth:
+    switch: s_lower_drop_5
+  u_first:
+    switch: s_upper_drop_1
+  u_second:
+    switch: s_upper_drop_2
+  u_third:
+    switch: s_upper_drop_3
+  u_fourth:
+    switch: s_upper_drop_4
+  u_fifth:
+    switch: s_upper_drop_5
+drop_target_banks:
+  upper_bank:
+    drop_targets: u_first, u_second, u_third, u_fourth, u_fifth
+    reset_coils: c_right_drop_reset
+    reset_on_complete: 1s
+  lower_bank:
+    drop_targets: l_first, l_second, l_third, l_fourth, l_fifth
+    reset_coils: c_left_drop_reset
+    reset_on_complete: 1s
+
+
 keyboard:   #use to drive your game from the computer for testing
   s:
     switch: s_start_button
@@ -92,6 +126,10 @@ keyboard:   #use to drive your game from the computer for testing
     switch: s_10_pt
   o:
     switch: s_outhole_kicker
+  l:
+    switch: s_left_flipper
+  r:
+    switch: s_right_flipper
   #"/":
   #  switch: s_right_eos
 

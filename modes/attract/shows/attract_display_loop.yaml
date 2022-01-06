@@ -1,5 +1,5 @@
 #show_version=5
-- duration: 1
+- duration: .1
   lights:
     l_top_right_200: red
     l_top_left_200: red
@@ -40,7 +40,7 @@
     l_50_left_rollover: red
     l_50_right_rollover: red
     l_1000_right_drop: red
-- duration: 1
+- duration: .1
   lights:
     l_top_right_200: blue
     l_top_left_200: blue
@@ -81,7 +81,7 @@
     l_50_left_rollover: blue
     l_50_right_rollover: blue
     l_1000_right_drop: blue
-- duration: 1
+- duration: .1
   lights:
     l_top_right_200: green
     l_top_left_200: green

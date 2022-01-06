@@ -6,25 +6,29 @@ coils:
   # Main cobrapin - Bank B
   c_right_slingshot:
     number: 0-0-1
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_left_slingshot:
     number: 0-0-2
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_left_bumper:
-    number: 0-0-7
+    number: 0-0-6
+    default_pulse_ms: 50
 
   # Main cobrapin - Bank C
   c_right_bumper:
     number: 1-0-1
+    default_pulse_ms: 25
   c_right_drop_reset:
     number: 1-0-2
+    default_pulse_ms: 50
   c_left_drop_reset:
     number: 1-0-3
+    default_pulse_ms: 50
   c_ball_eject:
-    number: 1-0-4
+    number: 0-0-7
     label:
     tags:
-    default_pulse_ms: 25
+    default_pulse_ms: 50
 
   # Satellite Board
   c_flipper_right:
