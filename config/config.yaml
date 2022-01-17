@@ -78,8 +78,8 @@ keyboard:   #use to drive your game from the computer for testing
 
 displays:
   window:
-    width: 800
-    height: 600
+    width: 400
+    height: 300
 
 sound_system:
   tracks:

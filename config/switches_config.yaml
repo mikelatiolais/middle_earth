@@ -8,13 +8,13 @@ switches:
   # Satellite board
   # Cabinet Switches
   s_left_flipper:
-    number: 3-0-16
+    number: 3-0-18
     tags: left_flipper
   s_right_flipper:
     number: 3-0-17
     tags: right_flipper
   s_start_button:
-    number: 3-0-10
+    number: 3-0-21
     tags: start
   s_test:
     number: 3-0-1
@@ -23,11 +23,11 @@ switches:
   s_volume_up:
     number: 3-0-3
   s_coin:
-    number: 3-0-11
+    number: 3-0-19
   s_tilt_cab:
-    number: 3-0-8
+    number: 3-0-23
   s_tilt_bob:
-    number: 3-0-9
+    number: 3-0-22
   
   # Main cobrapin board
   # Playfield switches

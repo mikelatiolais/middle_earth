@@ -6,18 +6,18 @@ coils:
   # Main cobrapin - Bank B
   c_right_slingshot:
     number: 0-0-1
-    default_pulse_ms: 25
+    default_pulse_ms: 40
   c_left_slingshot:
     number: 0-0-2
-    default_pulse_ms: 25
+    default_pulse_ms: 40
   c_left_bumper:
     number: 0-0-6
-    default_pulse_ms: 50
+    default_pulse_ms: 40
 
   # Main cobrapin - Bank C
   c_right_bumper:
     number: 1-0-1
-    default_pulse_ms: 25
+    default_pulse_ms: 40
   c_right_drop_reset:
     number: 1-0-2
     default_pulse_ms: 50
@@ -48,16 +48,16 @@ autofire_coils:
   left_slingshot:
     coil: c_left_slingshot
     switch: s_left_sling
-    enable_events: machine_reset_phase_3
+    #enable_events: machine_reset_phase_3
   right_slingshot:
     coil: c_right_slingshot
     switch: s_right_sling
-    enable_events: machine_reset_phase_3
+    #enable_events: machine_reset_phase_3
   left_bumper:
     coil: c_left_bumper
     switch: s_left_bumper
-    enable_events: machine_reset_phase_3
+    #enable_events: machine_reset_phase_3
   right_bumper:
     coil: c_right_bumper
     switch: s_right_bumper
-    enable_events: machine_reset_phase_3
+    #enable_events: machine_reset_phase_3
