@@ -3,6 +3,14 @@ mode:
   start_events: ball_started
   priority: 100
 
+ball_saves:
+  ball_save_ball_save:
+    active_time: 10s
+    hurry_up_time: 3s
+    timer_start_events: balldevice_bd_drain_ejecting_ball
+    auto_launch: true
+    balls_to_save: 1
+
 sounds:
   main_theme:
     volume: 0.75
