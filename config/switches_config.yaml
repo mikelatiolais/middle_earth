@@ -7,27 +7,32 @@ switches:
 
   # Satellite board
   # Cabinet Switches
-  s_left_flipper:
-    number: 3-0-18
-    tags: left_flipper
   s_right_flipper:
     number: 3-0-17
     tags: right_flipper
+  s_left_flipper:
+    number: 3-0-18
+    tags: left_flipper
+  s_coin:
+    number: 3-0-19
+  s_tilt_door_side:
+    number: 3-0-20
   s_start_button:
     number: 3-0-21
     tags: start
-  s_test:
-    number: 3-0-1
-  s_volume_down:
-    number: 3-0-2
-  s_volume_up:
-    number: 3-0-3
-  s_coin:
-    number: 3-0-19
-  s_tilt_cab:
-    number: 3-0-23
   s_tilt_bob:
     number: 3-0-22
+  s_tilt_cab:
+    number: 3-0-23
+
+  s_service_credit:
+    number: 3-0-24
+  s_service_down:
+    number: 3-0-25
+  s_service_up:
+    number: 3-0-26
+  s_service_menu:
+    number: 3-0-27
   
   # Main cobrapin board
   # Playfield switches
