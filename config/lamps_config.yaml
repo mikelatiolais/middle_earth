@@ -5,159 +5,159 @@
 lights:
   # Neopixel line 0
   l_top_right_200:
-    number: 0-0-0
+    number: 1-0-0
     subtype: led
     tags:
   l_top_left_200:
-    number: 0-0-1
+    number: 1-0-1
     subtype: led
     tags:
   l_triple_bonus:
-    number: 0-0-2
+    number: 1-0-2
     subtype: led
     tags:
   l_500_left_bonus:
-    number: 0-0-3
+    number: 1-0-3
     subtype: led
     tags:
   l_bonus_rollover:
-    number: 0-0-4
+    number: 1-0-4
     subtype: led
     tags:
   l_double_bonus:
-    number: 0-0-5
+    number: 1-0-5
     subtype: led
     tags:
   l_upper_left_200:
-    number: 0-0-6
+    number: 1-0-6
     subtype: led
     tags:
   l_lower_left_200:
-    number: 0-0-7
+    number: 1-0-7
     subtype: led
     tags:
   l_special_left:
-    number: 0-0-8
+    number: 1-0-8
     subtype: led
     tags:
   l_left_outlane_rollover:
-    number: 0-0-9
+    number: 1-0-9
     subtype: led
     tags:
   l_1000_left_drop:
-    number: 0-0-10
+    number: 1-0-10
     subtype: led
     tags:
   l_100_left_spinner:
-    number: 0-0-11
+    number: 1-0-11
     subtype: led
     tags:
   l_500_bottom_left:
-    number: 0-0-12
+    number: 1-0-12
     subtype: led
     tags:
   l_bottom_left_rollover:
-    number: 0-0-13
+    number: 1-0-13
     subtype: led
     tags:
   l_1000_center_bonus:
-    number: 0-0-14
+    number: 1-0-14
     subtype: led
     tags:
   l_shoot_again_1:
-    number: 0-0-15
+    number: 1-0-15
     subtype: led
     tags:
   l_shoot_again_2:
-    number: 0-0-16
+    number: 1-0-16
     subtype: led
     tags:
   l_2000_center_bonus:
-    number: 0-0-17
+    number: 1-0-17
     subtype: led
     tags:
   l_3000_center_bonus:
-    number: 0-0-18
+    number: 1-0-18
     subtype: led
     tags:
   l_4000_center_bonus:
-    number: 0-0-19
+    number: 1-0-19
     subtype: led
     tags:
   l_5000_center_bonus:
-    number: 0-0-20
+    number: 1-0-20
     subtype: led
     tags:
   l_bottom_right_rollover:
-    number: 0-0-21
+    number: 1-0-21
     subtype: led
     tags:
   l_6000_center_bonus:
-    number: 0-0-22
+    number: 1-0-22
     subtype: led
     tags:
   l_7000_center_bonus:
-    number: 0-0-23
+    number: 1-0-23
     subtype: led
     tags:
   l_extra_ball:
-    number: 0-0-24
+    number: 1-0-24
     subtype: led
     tags:
   l_right_inlane_rollover:
-    number: 0-0-25
+    number: 1-0-25
     subtype: led
     tags:
   l_right_outlane_rollover:
-    number: 0-0-26
+    number: 1-0-26
     subtype: led
     tags:
   l_right_outlane_special:
-    number: 0-0-27
+    number: 1-0-27
     subtype: led
     tags:
   l_right_inlane_special:
-    number: 0-0-28
+    number: 1-0-28
     subtype: led
     tags:
   l_100_right_spinner:
-    number: 0-0-29
+    number: 1-0-29
     subtype: led
     tags:
   l_8000_center_bonus:
-    number: 0-0-30
+    number: 1-0-30
     subtype: led
     tags:
   l_9000_center_bonus:
-    number: 0-0-31
+    number: 1-0-31
     subtype: led
     tags:
   l_10000_center_bonus:
-    number: 0-0-32
+    number: 1-0-32
     subtype: led
     tags:
   l_20000_center_bonus:
-    number: 0-0-33
+    number: 1-0-33
     subtype: led
     tags:
   l_double_bonus_center:
-    number: 0-0-34
+    number: 1-0-34
     subtype: led
     tags:
   l_500_center:
-    number: 0-0-35
+    number: 1-0-35
     subtype: led
     tags:
   l_50_left_rollover:
-    number: 0-0-36
+    number: 1-0-36
     subtype: led
     tags:
   l_50_right_rollover:
-    number: 0-0-37
+    number: 1-0-37
     subtype: led
     tags:
   l_1000_right_drop:
-    number: 0-0-38
+    number: 1-0-38
     subtype: led
     tags:
   

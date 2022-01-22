@@ -59,6 +59,7 @@ modes:
   #Add all your mode names here
   - attract
   - base
+  - service
   #- lizard_beast
   #- ape_beast
   #- escape
