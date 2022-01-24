@@ -43,3 +43,81 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_size: 50
+
+variable_player:
+  # Lower playfield
+  s_left_sling_active:
+    score: 20 
+  s_right_sling_active:
+    score: 20 
+  s_left_drain_rollover_active:
+    score: 100
+  s_right_drain_rollover_active:
+    score: 100
+  s_left_lower_pf_rollover_active:
+    score: 50
+  s_right_lower_pf_rollover_active:
+    score: 50
+  s_lower_inner_lane_rollover_active:
+    score: 50
+
+  # Drop target Lower
+  s_lower_drop_1_active:
+    score: 500
+  s_lower_drop_2_active:
+    score: 500
+  s_lower_drop_3_active:
+    score: 500
+  s_lower_drop_4_active:
+    score: 500
+  s_lower_drop_5_active:
+    score: 500
+  # Drop target Upper
+  s_upper_drop_1_active:
+    score: 500
+  s_upper_drop_2_active:
+    score: 500
+  s_upper_drop_3_active:
+    score: 500
+  s_upper_drop_4_active:
+    score: 500
+  s_upper_drop_5_active:
+    score: 500
+
+  # Behind drops
+  s_behind_drops_active:
+    score: 100
+
+  # Bumpers
+  s_left_bumper_active:
+    score: 10
+  s_right_bumper_active:
+    score: 10
+
+  # Spinners
+  s_right_spinner_active:
+    score: 10
+  s_left_spinner_active:
+    score: 10
+
+  # Upper Playfield
+  s_left_upper_rollover_active:
+    score: 50
+  s_right_upper_rollover_active:
+    score: 50
+  s_10_active:
+    score: 10
+  s_lower_left_target_active:
+    score: 200
+  s_lower_middle_target_active:
+    score: 200
+  s_target_front_rollover_active:
+    score: 500
+  s_upper_left_target_active:
+    score: 200
+  s_upper_right_target_active:
+    score: 200
+
+  # Loop
+  s_rollthru_rollover_active:
+    score: 100
