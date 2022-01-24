@@ -1,0 +1,38 @@
+##! mode: high_score
+# modes/high_score/config/high_score.yaml
+mode:
+  priority: 500
+  start_events: game_ending, start_high_score
+  use_wait_queue: true
+high_score:
+  _overwrite: true
+  enter_initials_timeout: 60
+  award_slide_display_time: 4s
+  # define your high score categories and the awards
+  categories: !!omap
+    - score:
+        - GRAND CHAMPION
+        - HIGH SCORE 1
+        - HIGH SCORE 2
+        - HIGH SCORE 3
+        - HIGH SCORE 4
+        - HIGH SCORE 5
+        - HIGH SCORE 6
+        - HIGH SCORE 7
+        - HIGH SCORE 8
+    - loops:
+        - LOOP CHAMP
+  # set the defaults
+  defaults:
+    score:
+      - HAL: 100000
+      - NGM: 900
+      - CCC: 800
+      - EEE: 700
+      - FFF: 600
+      - GGG: 500
+      - HHH: 400
+      - III: 300
+      - JJJ: 200
+    loops:
+      - NGM: 2

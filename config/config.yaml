@@ -60,6 +60,7 @@ modes:
   - attract
   - base
   - service
+  - high_score
   #- lizard_beast
   #- ape_beast
   #- escape
