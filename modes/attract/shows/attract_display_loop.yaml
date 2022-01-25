@@ -54,7 +54,7 @@
         anchor_x: center
         anchor_y: center
         x: center
-        y: top-500
+        y: top-400
       - type: Text
         text: (machine|loops1_label)
         style: attract_mode_high_score_display_label

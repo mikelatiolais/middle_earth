@@ -1,5 +1,4 @@
-##! mode: high_score
-# modes/high_score/config/high_score.yaml
+#config_version=5 
 mode:
   priority: 500
   start_events: game_ending, start_high_score
