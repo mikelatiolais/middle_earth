@@ -35,3 +35,98 @@ high_score:
       - JJJ: 200
     loops:
       - NGM: 2
+slide_player:
+  _overwrite: true
+  high_score_enter_initials: high_score_enter_initials
+  high_score_award_display: high_score_award_display
+slides:
+  _overwrite: true
+  high_score_enter_initials:
+    - type: text
+      style: big
+      font_size: 18
+      text: PLAYER (player_num)
+      color: ffff00
+      x: 105
+      y: 90
+    - type: text
+      style: big
+      font_size: 18
+      text: (award)
+      color: f0f0f0
+      x: 105
+      y: 70
+    - type: text_input
+      initial_char: A
+      dynamic_x: false
+      key: high_score
+      style: big
+      font_size: 18
+      max_chars: 3
+      x: 105
+      y: 20
+      shift_left_event: sw_lower_left_flipper
+      shift_right_event: sw_lower_right_flipper
+      select_event: sw_start
+      color: ff0000
+    - type: text
+      style: big
+      text: '<       >'
+      font_size: 18
+      x: 105
+      y: 20
+      color: ff0000
+    - type: text
+      text: ''
+      key: high_score
+      font_size: 18
+      style: big
+      x: 105
+      y: 50
+      color: ff00ff
+      animations:
+        show_slide:
+          - property: opacity
+            value: 1
+            duration: 0.3s
+            easing: in_out_quint
+          - property: opacity
+            value: 0
+            duration: 0.3s
+            repeat: true
+            easing: in_out_quint
+  high_score_award_display:
+    - type: text
+      text: (player_name)
+      font_size: 18
+      style: big
+      anchor_y: middle
+      anchor_x: middle
+      x: middle
+      y: middle
+      color: 00ff00
+      animations:
+        show_slide:
+          - property: opacity
+            value: 1
+            duration: 0.05s
+          - property: opacity
+            value: 0
+            duration: 0.05s
+            repeat: true
+    - type: text
+      text: (award)
+      font_size: 18
+      style: big
+      x: 105
+      y: 110
+      color: 0000ff
+    - type: text
+      text: (value)
+      style: big
+      x: 105
+      y: 30
+      color: 4040FF
+      font_size: 20
+      number_grouping: true
+      min_digits: 2
