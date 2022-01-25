@@ -1,6 +1,10 @@
 #config_version=5
 
 show_player:
-  mode_attract_started: attract_light_loop
+  mode_attract_started: attract_light_loop:
+    loops: -1
+    speed: 1
   mode_attract_started: attract_display_loop
+    loops: -1
+    speed: 1
 
