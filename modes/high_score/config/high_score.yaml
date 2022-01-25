@@ -47,15 +47,15 @@ slides:
       font_size: 18
       text: PLAYER (player_num)
       color: ffff00
-      x: 105
-      y: 90
+      x: middle
+      y: middle
     - type: text
       style: big
       font_size: 18
       text: (award)
       color: f0f0f0
-      x: 105
-      y: 70
+      x: middle
+      y: middle-20
     - type: text_input
       initial_char: A
       dynamic_x: false
@@ -63,11 +63,11 @@ slides:
       style: big
       font_size: 18
       max_chars: 3
-      x: 105
-      y: 20
-      shift_left_event: sw_lower_left_flipper
-      shift_right_event: sw_lower_right_flipper
-      select_event: sw_start
+      x: middle
+      y: middle-40
+      shift_left_event: s_left_flipper
+      shift_right_event: s_right_flipper
+      select_event: s_start
       color: ff0000
     - type: text
       style: big
