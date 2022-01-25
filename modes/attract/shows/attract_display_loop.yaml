@@ -10,43 +10,43 @@
         anchor_x: center
         anchor_y: center
         x: center
-        y: top-100
+        y: top-50
       - type: Text
         text: (machine|score1_label)
         style: attract_mode_high_score_display_label
-        y: top-200
+        y: top-70
       - type: Text
         text: (machine|score1_name)
         style: attract_mode_high_score_display_name
-        y: top-200
+        y: top-70
       - type: Text
         text: (machine|score1_value)
         style: attract_mode_high_score_display_score
-        y: top-200
+        y: top-70
       - type: Text
         text: (machine|score2_label)
         style: attract_mode_high_score_display_label
-        y: top-240
+        y: top-110
       - type: Text
         text: (machine|score2_name)
         style: attract_mode_high_score_display_name
-        y: top-240
+        y: top-110
       - type: Text
         text: (machine|score2_value)
         style: attract_mode_high_score_display_score
-        y: top-240
+        y: top-110
       - type: Text
         text: (machine|score3_label)
         style: attract_mode_high_score_display_label
-        y: top-280
+        y: top-150
       - type: Text
         text: (machine|score3_name)
         style: attract_mode_high_score_display_name
-        y: top-280
+        y: top-150
       - type: Text
         text: (machine|score3_value)
         style: attract_mode_high_score_display_score
-        y: top-280
+        y: top-150
       - type: Text
         text: LOOP CHAMPION
         font_size: 60
@@ -54,16 +54,16 @@
         anchor_x: center
         anchor_y: center
         x: center
-        y: top-400
+        y: top-300
       - type: Text
         text: (machine|loops1_label)
         style: attract_mode_high_score_display_label
-        y: top-600
+        y: top-320
       - type: Text
         text: (machine|loops1_name)
         style: attract_mode_high_score_display_name
-        y: top-600
+        y: top-320
       - type: Text
         text: (machine|loops1_value)
         style: attract_mode_high_score_display_score
-        y: top-600
+        y: top-320

@@ -65,24 +65,24 @@ slides:
       max_chars: 3
       x: middle
       y: middle-40
-      shift_left_event: s_left_flipper
-      shift_right_event: s_right_flipper
-      select_event: s_start
+      shift_left_event: s_left_flipper_active
+      shift_right_event: s_right_flipper_active
+      select_event: s_start_button_active
       color: ff0000
     - type: text
       style: big
       text: '<       >'
       font_size: 18
-      x: 105
-      y: 20
+      x: middle
+      y: middle-80
       color: ff0000
     - type: text
       text: ''
       key: high_score
       font_size: 18
       style: big
-      x: 105
-      y: 50
+      x: middle
+      y: middle-60
       color: ff00ff
       animations:
         show_slide:
@@ -118,14 +118,14 @@ slides:
       text: (award)
       font_size: 18
       style: big
-      x: 105
-      y: 110
+      x: middle
+      y: middle+20
       color: 0000ff
     - type: text
       text: (value)
       style: big
-      x: 105
-      y: 30
+      x: middle
+      y: middle-20
       color: 4040FF
       font_size: 20
       number_grouping: true
