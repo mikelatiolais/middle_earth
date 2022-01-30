@@ -20,9 +20,14 @@ sound_player:
   mode_base_started:
     main_theme:
       loops: -1
-
+  # Base mode sound effects
   s_left_bumper_active: laser5
   s_right_bumper_active: laser5
+
+  s_right_spinner_active: laser10
+  s_left_spinner_active: laser10
+
+  s_10_pt_active: laser12
 
 slide_player:
   mode_base_started:
