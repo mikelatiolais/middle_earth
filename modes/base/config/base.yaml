@@ -21,7 +21,8 @@ sound_player:
     main_theme:
       loops: -1
 
-  s_left_bumper_active: laser_5.wav
+  s_left_bumper_active: laser5
+  s_right_bumper_active: laser5
 
 slide_player:
   mode_base_started:
