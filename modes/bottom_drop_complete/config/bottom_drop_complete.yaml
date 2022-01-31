@@ -13,7 +13,7 @@ sound_player:
     danger:
       volume: 0.25
       loops: 0
-      fade_out: 0.25
+      fade_out: 0.0
   mode_bottom_drop_complete_stopped:
     danger:
       action: stop
