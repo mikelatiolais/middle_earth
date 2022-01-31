@@ -36,6 +36,15 @@ sound_player:
 
   # drop target 
 
+  mode_bottom_drop_complete_started:
+    danger:
+      volume: 0.25
+      loops: 0
+      fade_out: 0.0
+  mode_bottom_drop_complete_stopped:
+    danger:
+      action: stop
+
 slide_player:
   mode_base_started:
     widgets:
