@@ -12,3 +12,6 @@ sound_player:
   mode_top_drop_complete_started:
     danger:
       loops: 1
+  mode_top_drop_complete_stopped:
+    danger:
+      action: stop
