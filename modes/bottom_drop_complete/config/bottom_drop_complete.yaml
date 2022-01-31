@@ -9,10 +9,11 @@ variable_player:
     score: 2000
 
 sound_player:
-  mode_top_drop_complete_started:
+  mode_bottom_drop_complete_started:
     danger:
-      loops: 1
-  mode_top_drop_complete_stopped:
+      volume: 0.25
+      loops: 0
+  mode_bottom_drop_complete_stopped:
     danger:
       action: stop
 
