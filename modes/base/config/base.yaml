@@ -29,6 +29,8 @@ sound_player:
 
   s_10_pt_active: laser12
 
+  # drop target 
+
 slide_player:
   mode_base_started:
     widgets:

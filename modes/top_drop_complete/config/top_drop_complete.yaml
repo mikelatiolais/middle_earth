@@ -1,0 +1,13 @@
+#config_version=5
+mode:
+  start_events: drop_target_bank_upper_bank_down
+  stop_events: drop_target_bank_upper_bank_up
+  priority: 500
+
+  s_behind_drops_active:
+    score: 2000
+
+sound_player:
+  mode_top_drop_complete_started:
+    main_theme:
+      loops: 1

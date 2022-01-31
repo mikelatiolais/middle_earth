@@ -48,9 +48,9 @@ drop_target_banks:
   upper_bank:
     drop_targets: u_first, u_second, u_third, u_fourth, u_fifth
     reset_coils: c_right_drop_reset
-    reset_on_complete: 1s
+    reset_on_complete: 5s
   lower_bank:
     drop_targets: l_first, l_second, l_third, l_fourth, l_fifth
     reset_coils: c_left_drop_reset
-    reset_on_complete: 1s
+    reset_on_complete: 5s
 

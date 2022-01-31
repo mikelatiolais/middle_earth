@@ -61,6 +61,8 @@ modes:
   - base
   - service
   - high_score
+  - top_drop_complete
+  - bottom_drop_complete
   #- lizard_beast
   #- ape_beast
   #- escape

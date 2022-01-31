@@ -1,0 +1,8 @@
+#config_version=5
+mode:
+  start_events: drop_target_bank_lower_bank_down
+  stop_events: drop_target_bank_lower_bank_up
+  priority: 500
+
+  s_behind_drops_active:
+    score: 2000
