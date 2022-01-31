@@ -4,5 +4,12 @@ mode:
   stop_events: drop_target_bank_lower_bank_up
   priority: 500
 
+variable_player:
   s_behind_drops_active:
     score: 2000
+
+sound_player:
+  mode_top_drop_complete_started:
+    danger:
+      loops: 1
+

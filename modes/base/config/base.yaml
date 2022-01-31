@@ -13,7 +13,7 @@ ball_saves:
 
 sounds:
   main_theme:
-    volume: 0.75
+    volume: 0.50
     priority: 100
 
 sound_player:
