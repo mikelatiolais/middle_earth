@@ -41,7 +41,7 @@ sound_player:
       volume: 0.25
       loops: 0
       fade_out: 0.0
-  mode_bottom_drop_complete_stopped:
+  drop_target_bank_lower_bank_up:
     danger:
       action: stop
 
