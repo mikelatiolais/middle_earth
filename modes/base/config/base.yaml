@@ -45,6 +45,15 @@ sound_player:
     danger:
       action: stop
 
+  mode_top_drop_complete_started:
+    danger:
+      volume: 0.25
+      loops: 0
+      fade_out: 0.0
+  drop_target_bank_upper_bank_up:
+    danger:
+      action: stop
+
 slide_player:
   mode_base_started:
     widgets:

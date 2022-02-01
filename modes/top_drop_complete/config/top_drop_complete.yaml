@@ -7,12 +7,3 @@ mode:
 variable_player:
   s_behind_drops_active:
     score: 2000
-
-sound_player:
-  mode_top_drop_complete_started:
-    danger:
-      volume: 0.25
-      loops: 0
-  mode_top_drop_complete_stopped:
-    danger:
-      action: stop
