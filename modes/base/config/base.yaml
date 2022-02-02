@@ -138,7 +138,7 @@ variable_player:
     score: 50
   s_right_upper_rollover_active:
     score: 50
-  s_10_active:
+  s_10_pt_active:
     score: 10
   s_lower_left_target_active:
     score: 200
