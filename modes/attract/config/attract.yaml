@@ -8,4 +8,3 @@ show_player:
     attract_display_loop:
       loops: -1
       speed: 1
-

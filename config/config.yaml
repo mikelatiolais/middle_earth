@@ -115,6 +115,15 @@ assets:
     voice:
       track: voice
 
+sound_player:
+  mode_base_started:
+    main_theme:
+      loops: -1
+
+  mode_base_stopped:
+    main_theme:
+      action: stop
+
 # in your machine wide config file
 widget_styles:
   attract_mode_high_score_display_label:
