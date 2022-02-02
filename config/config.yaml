@@ -119,6 +119,7 @@ sound_player:
   mode_base_started:
     main_theme:
       loops: -1
+      start_at: 22
 
   mode_base_stopped:
     main_theme:
