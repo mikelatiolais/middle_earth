@@ -7,7 +7,7 @@ ball_saves:
   ball_save_ball_save:
     active_time: 10s
     hurry_up_time: 3s
-    timer_start_events: playfield_active
+    timer_start_events: sw_playfield_active
     auto_launch: true
     balls_to_save: 1
 
