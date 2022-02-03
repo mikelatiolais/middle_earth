@@ -26,13 +26,19 @@ sound_player:
         #action: stop
 
   # Base mode sound effects
-  s_left_bumper_active: laser5
-  s_right_bumper_active: laser5
+  sw_bumper_active: laser5
 
-  s_right_spinner_active: laser10
-  s_left_spinner_active: laser10
+  sw_spinner_active: laser10
 
   s_10_pt_active: laser12
+
+  sw_sling_active: laser13
+  
+  sw_rollover_active: activate_1
+
+  sw_drain_active: lasergun2
+
+  sw_drop_target_active: laser13
 
   # drop target 
 
@@ -124,14 +130,22 @@ variable_player:
   # Bumpers
   s_left_bumper_active:
     score: 10
+    left_bumper_hits: 1
+    total_bumper_hits: 1
   s_right_bumper_active:
     score: 10
+    right_bumper_hits: 1
+    total_bumper_hits: 1
 
   # Spinners
   s_right_spinner_active:
     score: 10
+    right_spinner_hits: 1
+    total_spinner_hits: 1
   s_left_spinner_active:
     score: 10
+    left_spinner_hits: 1
+    total_spinner_hits: 1
 
   # Upper Playfield
   s_left_upper_rollover_active:
