@@ -1,0 +1,27 @@
+#config_version=5
+mode_settings:
+  display_delay_ms: 1s
+  hurry_up_delay_ms: 0
+  bonus_entries:
+    - event: bonus_drops
+      score: 500 * (current_player.top_drop_complete + current_player.bottom_drop_complete)
+slide_player:
+  mode_bonus_started: bonus_start_slide
+  bonus_drops: bonus_drops_slide
+  bonus_math: bonus_math_slide
+  bonus_total: bonus_total_slide
+slides:
+  bonus_start_slide:
+    widgets:
+      - type: text
+        text: Bonus
+  bonus_drops_slide:
+    - type: text
+      text: "Completed Drop Target Banks (player|level)"
+    - type: text
+      text: (score)
+  bonus_total_slide:
+    - type: text
+      text: "Total Bonus"
+    - type: text
+      text: (score)
