@@ -8,7 +8,6 @@ mode_settings:
 slide_player:
   mode_bonus_started: bonus_start_slide
   bonus_drops: bonus_drops_slide
-  bonus_math: bonus_math_slide
   bonus_total: bonus_total_slide
 slides:
   bonus_start_slide:
