@@ -64,6 +64,7 @@ modes:
   - top_drop_complete
   - bottom_drop_complete
   - bonus
+  - tilt
   #- lizard_beast
   #- ape_beast
   #- escape
@@ -118,6 +119,9 @@ player_vars:
     value_type: int
   playfield_bonus:
     initial_value: 0
+    value_type: int
+  playfield_multiplier:
+    initial_value: 1
     value_type: int
 
 displays:

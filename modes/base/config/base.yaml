@@ -17,14 +17,6 @@ sounds:
     priority: 100
 
 sound_player:
-        #  mode_base_started:
-        #main_theme:
-        #loops: -1
-
-        #mode_base_stopped:
-        #main_theme:
-        #action: stop
-
   # Base mode sound effects
   sw_bumper_active: laser5
 
@@ -41,7 +33,6 @@ sound_player:
   sw_drop_target_active: laser13
 
   # drop target 
-
   mode_bottom_drop_complete_started:
     danger:
       volume: 0.25
