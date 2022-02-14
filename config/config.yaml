@@ -111,7 +111,7 @@ player_vars:
   top_drop_complete:
     initial_value: 0
     value_type: int
-  bottom_drop_complete:
+  b_drop_complete:
     initial_value: 0
     value_type: int
   total_drop_complete:

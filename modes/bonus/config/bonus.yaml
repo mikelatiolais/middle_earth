@@ -5,6 +5,8 @@ mode_settings:
   bonus_entries:
     - event: bonus_drops
       score: 500 * (current_player.top_drop_complete + current_player.bottom_drop_complete)
+    - event: bonus_multiplier
+      score: 500 * (1 + current_player.top_drop_complete + current_player.b_drop_complete)
 slide_player:
   mode_bonus_started: bonus_start_slide
   bonus_drops: bonus_drops_slide

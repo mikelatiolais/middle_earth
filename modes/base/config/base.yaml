@@ -159,3 +159,7 @@ variable_player:
   # Loop
   s_rollthru_rollover_active:
     score: 100
+
+  # Bonus
+  drop_target_bank_lower_bank_down:
+    b_drop_complete: 1
