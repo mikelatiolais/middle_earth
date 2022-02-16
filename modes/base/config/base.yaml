@@ -162,4 +162,4 @@ variable_player:
 
   # Bonus
   drop_target_bank_lower_bank_down:
-    b_drop_complete: 1
+    total_drop_complete: 1
