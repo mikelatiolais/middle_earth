@@ -90,28 +90,13 @@ player_vars:
   current_mode:
     initial_value: Landing
     value_type: str
-  left_bumper_hits:
-    initial_value: 0
-    value_type: int
-  right_bumper_hits:
+  total_mode_complete:
     initial_value: 0
     value_type: int
   total_bumper_hits:
     initial_value: 0
     value_type: int
-  left_spinner_hits:
-    initial_value: 0
-    value_type: int
-  right_spinner_hits:
-    initial_value: 0
-    value_type: int
   total_spinner_hits:
-    initial_value: 0
-    value_type: int
-  top_drop_complete:
-    initial_value: 0
-    value_type: int
-  b_drop_complete:
     initial_value: 0
     value_type: int
   total_drop_complete:
@@ -119,6 +104,9 @@ player_vars:
     value_type: int
   playfield_bonus:
     initial_value: 0
+    value_type: int
+  playfield_bonus_multiplier:
+    initial_value: 1
     value_type: int
   playfield_multiplier:
     initial_value: 1

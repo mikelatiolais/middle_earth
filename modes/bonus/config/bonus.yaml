@@ -5,11 +5,14 @@ mode_settings:
   bonus_entries:
     - event: bonus_drops
       score: 500 * (current_player.total_drop_complete)
+    - event: bonus_playfield
+      score: (current_player.playfield_bonus)
     - event: bonus_multiplier
-      score: 500 * (1 + current_player.top_drop_complete + current_player.b_drop_complete)
+      score: 500 * (1 + current_player.total_drop_complete)
 slide_player:
   mode_bonus_started: bonus_start_slide
   bonus_drops: bonus_drops_slide
+  bonus_playfield: bonus_playfield_slide
   bonus_total: bonus_total_slide
 slides:
   bonus_start_slide:
@@ -21,6 +24,16 @@ slides:
     - type: text
       font_size: 18
       text: "Completed Drop Target Banks (player|total_drop_complete)"
+      x: middle
+      y: middle
+    - type: text
+      x: middle
+      y: middle-20
+      text: (score)
+  bonus_playfield_slide:
+    - type: text
+      font_size: 18
+      text: "Playfield Bonus"
       x: middle
       y: middle
     - type: text

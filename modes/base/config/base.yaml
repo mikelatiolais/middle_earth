@@ -80,10 +80,13 @@ variable_player:
     score: 20 
   s_right_sling_active:
     score: 20 
+    playfield_bonus: (50 * current_player.playfield_bonus_multiplier)
   s_left_drain_rollover_active:
     score: 100
+    playfield_bonus: (100 * current_player.playfield_bonus_multiplier)
   s_right_drain_rollover_active:
     score: 100
+    playfield_bonus: (100 * current_player.playfield_bonus_multiplier)
   s_left_lower_pf_rollover_active:
     score: 50
   s_right_lower_pf_rollover_active:
@@ -131,11 +134,9 @@ variable_player:
   # Spinners
   s_right_spinner_active:
     score: 10
-    right_spinner_hits: 1
     total_spinner_hits: 1
   s_left_spinner_active:
     score: 10
-    left_spinner_hits: 1
     total_spinner_hits: 1
 
   # Upper Playfield
@@ -151,6 +152,7 @@ variable_player:
     score: 200
   s_target_front_rollover_active:
     score: 500
+    playfield_bonus: (500* current_player.playfield_bonus_multiplier)
   s_upper_left_target_active:
     score: 200
   s_upper_right_target_active:
@@ -162,4 +164,6 @@ variable_player:
 
   # Bonus
   drop_target_bank_lower_bank_down:
+    total_drop_complete: 1
+  drop_target_bank_upper_bank_down:
     total_drop_complete: 1
