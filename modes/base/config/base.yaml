@@ -60,11 +60,13 @@ slide_player:
         min_digits: 2
         font_name: Greenscr
         font_size: 100
+        color: green
       - type: text
         text: PLAYER (number)
         y: 10
         x: 10
         font_name: Greenscr
+        color: green
         font_size: 50
         anchor_x: left
         anchor_y: bottom
@@ -75,6 +77,7 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_name: Greenscr
+        color: green
         font_size: 50
 
 variable_player:
