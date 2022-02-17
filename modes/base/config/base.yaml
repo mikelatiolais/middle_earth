@@ -174,8 +174,38 @@ variable_player:
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
 
+shot_profiles:
+  base_standup_targets:
+    states:
+      - name: unlit
+        show: "off"
+      - name: lit
+        show: "flash"
+
+
 shots:
   shot_upper_right_standup:
     switch: s_upper_right_target
+    profile: base_standup_targets
     show_tokens:
       light: l_top_right_200
+  shot_upper_left_standup:
+    switch: s_upper_left_target
+    profile: base_standup_targets
+    show_tokens:
+      light: l_top_left_200
+  shot_lower_left_standup:
+    switch: s_lower_left_target
+    profile: base_standup_targets
+    show_tokens:
+      light: l_lower_left_200
+  shot_lower_middle_standup:
+    switch: s_lower_middle_target
+    profile: base_standup_targets
+    show_tokens:
+      light: l_upper_left_200
+  shot_lower_middle_standup:
+    switch: s_lower_middle_target
+    profile: base_standup_targets
+    show_tokens:
+      light: l_500_left_bonus
