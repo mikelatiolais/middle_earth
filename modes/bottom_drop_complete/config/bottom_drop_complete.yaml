@@ -2,9 +2,10 @@
 mode:
   start_events: drop_target_bank_lower_bank_down
   stop_events: drop_target_bank_lower_bank_up
-  priority: 500
+  priority: 200
 
 
 variable_player:
   s_behind_drops_active:
     score: 2000
+    block: true

@@ -173,3 +173,9 @@ variable_player:
     total_drop_complete: 1
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
+
+shots:
+  shot_upper_right_standup:
+    switch: s_upper_right_target
+    show_tokens:
+      light: l_top_right_200
