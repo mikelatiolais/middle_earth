@@ -21,6 +21,8 @@ sound_player:
   sw_bumper_active: laser5
 
   sw_spinner_active: laser10
+  
+  sw_standup_active: laser_gun_2
 
   s_10_pt_active: laser12
 
@@ -28,7 +30,7 @@ sound_player:
   
   sw_rollover_active: activate_1
 
-  sw_drain_active: lasergun2
+  sw_drain_active: complain_1
 
   sw_drop_target_active: laser13
 
@@ -179,8 +181,10 @@ shot_profiles:
     states:
       - name: unlit
         show: "off"
-      - name: lit
+      - name: lit_flashing
         show: "flash"
+      - name: lit_on
+        show: "on"
 
 
 shots:
@@ -204,8 +208,8 @@ shots:
     profile: base_standup_targets
     show_tokens:
       light: l_upper_left_200
-  shot_lower_middle_standup:
-    switch: s_lower_middle_target
+  shot_bonus_standup:
+    switch: s_target_front_rollover
     profile: base_standup_targets
     show_tokens:
       light: l_500_left_bonus

@@ -134,13 +134,13 @@ switches:
     tags: playfield_active, spinner
   s_lower_left_target:
     number: 1-0-18
-    tags: playfield_active, standup
+    tags: standup
   s_lower_middle_target:
     number: 1-0-19
-    tags: playfield_active, standup
+    tags: standup
   s_target_front_rollover:
     number: 1-0-20
-    tags: playfield_active, rollover
+    tags: standup
   s_rollthru_rollover:
     number: 1-0-21
     tags: playfield_active, loop
