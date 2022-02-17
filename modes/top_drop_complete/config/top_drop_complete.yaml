@@ -7,4 +7,3 @@ mode:
 variable_player:
   s_behind_drops_active:
     score: 2000
-    block: true

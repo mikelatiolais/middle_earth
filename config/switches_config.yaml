@@ -94,10 +94,10 @@ switches:
     tags: bumper
   s_upper_right_target:
     number: 1-0-2
-    tags: playfield_active, standup
+    tags: standup
   s_upper_left_target:
     number: 1-0-3
-    tags: playfield_active, standup
+    tags: standup
 
   # Bank J4
   s_right_spinner:
