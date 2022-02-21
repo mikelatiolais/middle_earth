@@ -53,6 +53,11 @@ sound_player:
     danger:
       action: stop
 
+  mode_base_started:
+    welcome_voice: 0.25
+    loops: 0
+    
+
 slide_player:
   mode_base_started:
     widgets:
