@@ -213,8 +213,12 @@ shot_profiles:
     states:
       - name: unlit
         show: "off"
-      - name: lit_flashing
-        show: "flash"
+      - name: lit_on
+        show: "on"
+  base_rollovers:
+    states:
+      - name: unlit
+        show: "off"
       - name: lit_on
         show: "on"
 
@@ -245,3 +249,28 @@ shots:
     profile: base_standup_targets
     show_tokens:
       light: l_500_left_bonus
+  shot_loop_rollover:
+    switch: s_rollthru_rollover
+    profile: base_rollovers
+    show_tokens:
+      light: l_bonus_rollover
+  shot_left_upper_rollover:
+    switch: s_left_upper_rollover
+    profile: base_rollovers
+    show_tokens:
+      light: l_50_left_rollover
+  shot_right_upper_rollover:
+    switch: s_right_upper_rollover
+    profile: base_rollovers
+    show_tokens:
+      light: l_50_right_rollover
+  shot_left_lower_rollover:
+    switch: s_left_lower_rollover
+    profile: base_rollovers
+    show_tokens:
+      light: l_bottom_left_rollover
+  shot_right_lower_rollover:
+    switch: s_right_lower_rollover
+    profile: base_rollovers
+    show_tokens:
+      light: l_bottom_right_rollover
