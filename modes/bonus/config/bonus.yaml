@@ -7,6 +7,13 @@ mode_settings:
       score: 500 * (current_player.total_drop_complete)
     - event: bonus_playfield
       score: (current_player.playfield_bonus)
+
+sound_player:
+  mode_bonus_started:
+    calculating_bonus_voice:
+      volume: 1
+      loops: 0
+
 slide_player:
   mode_bonus_started: bonus_start_slide
   bonus_drops: bonus_drops_slide

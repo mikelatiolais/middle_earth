@@ -54,8 +54,14 @@ sound_player:
       action: stop
 
   mode_base_started:
-    welcome_voice: 0.25
-    loops: 0
+    landing_voice: 
+      volume: 1
+      loops: 0
+
+  ball_save_ball_save_ball_save_saving_ball:
+    ball_saved_voice:
+      volume: 1
+      loops: 0
     
 
 slide_player:

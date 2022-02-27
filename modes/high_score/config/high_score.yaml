@@ -3,6 +3,11 @@ mode:
   priority: 500
   start_events: game_ending, start_high_score
   use_wait_queue: true
+sound_player:
+  mode_high_score_started:
+    high_score_voice:
+      volume: 0.5
+      loops: 0
 high_score:
   _overwrite: true
   enter_initials_timeout: 60
