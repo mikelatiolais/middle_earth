@@ -1,5 +1,5 @@
 #show_version=5
-- duration: 20s
+- duration: 10s
   slides:
     show_high_scores:
       widgets:
@@ -67,6 +67,8 @@
         text: (machine|loops1_value)
         style: attract_mode_high_score_display_score
         y: top-320
+- duration: 10s
+  slides:
     slide_tfr_logo:
       widgets:
       - type: image
