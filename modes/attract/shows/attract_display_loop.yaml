@@ -67,3 +67,7 @@
         text: (machine|loops1_value)
         style: attract_mode_high_score_display_score
         y: top-320
+    slide_tfr_logo:
+      widgets:
+      - type: image
+        image: tfr_logo 
