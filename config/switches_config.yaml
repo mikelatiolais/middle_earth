@@ -57,10 +57,10 @@ switches:
     tags: playfield_active, drain
   s_left_lower_pf_rollover:
     number: 0-0-18
-    tags: playfield_active, rollover
+    tags: rollover
   s_right_lower_pf_rollover:
     number: 0-0-17
-    tags: playfield_active, rollover
+    tags: rollover
   s_lower_inner_lane_rollover:
     number: 0-0-16
     tags: playfield_active, rollover
@@ -118,12 +118,12 @@ switches:
   s_upper_drop_5:
     number: 1-0-29
     tags: drop_target
-  s_left_upper_rollover:
-    number: 1-0-30
-    tags: playfield_active, rollover
   s_right_upper_rollover:
+    number: 1-0-30
+    tags: rollover
+  s_left_upper_rollover:
     number: 1-0-31
-    tags: playfield_active, rollover
+    tags: rollover
 
   # Bank J5
   s_10_pt:
@@ -143,4 +143,4 @@ switches:
     tags: standup
   s_rollthru_rollover:
     number: 1-0-21
-    tags: playfield_active, loop
+    tags: loop, rollover

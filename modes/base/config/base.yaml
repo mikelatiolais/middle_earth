@@ -16,19 +16,15 @@ show_player:
       key: ball_save
       speed: 2
       show_tokens:
-        lights: 
-          l_shoot_again_1:
-          l_shoot_again_2:
-        color: red
+        lights: l_shoot_again_1, l_shoot_again_2
+        color: blue
   ball_save_ball_save_ball_save_hurry_up:
     flash_color:
       key: ball_save
       speed: 4
       show_tokens:
-        lights:
-          l_shoot_again_1:
-          l_shoot_again_2:
-        color: red
+        lights: l_shoot_again_1, l_shoot_again_2
+        color: blue
   ball_save_ball_save_ball_save_disabled:
     ball_save: stop
 
@@ -265,12 +261,12 @@ shots:
     show_tokens:
       light: l_50_right_rollover
   shot_left_lower_rollover:
-    switch: s_left_lower_rollover
+    switch: s_left_lower_pf_rollover
     profile: base_rollovers
     show_tokens:
       light: l_bottom_left_rollover
   shot_right_lower_rollover:
-    switch: s_right_lower_rollover
+    switch: s_right_lower_pf_rollover
     profile: base_rollovers
     show_tokens:
       light: l_bottom_right_rollover
