@@ -73,3 +73,21 @@
       widgets:
       - type: image
         image: tfr_logo 
+- duration: 10s
+  slides:
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+- duration: 10s
+  slides:
+    show_high_scores:
+      widgets:
+      - type: Text
+        text: PRESENTS
+        font_size: 60
+        bold: true
+        anchor_x: center
+        anchor_y: center
+        x: center
+        y: top-50
