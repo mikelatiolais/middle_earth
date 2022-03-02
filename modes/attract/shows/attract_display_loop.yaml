@@ -84,7 +84,7 @@
     show_high_scores:
       widgets:
       - type: Text
-        text: PRESENTS
+        text: PRESENTS...
         font_size: 60
         bold: true
         anchor_x: center
