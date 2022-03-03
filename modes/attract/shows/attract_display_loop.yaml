@@ -1,5 +1,5 @@
 #show_version=5
-- duration: 10s
+- duration: 5s
   slides:
     show_high_scores:
       widgets:
@@ -67,19 +67,21 @@
         text: (machine|loops1_value)
         style: attract_mode_high_score_display_score
         y: top-320
-- duration: 10s
+- duration: 5s
   slides:
     slide_tfr_logo:
       widgets:
       - type: image
-        image: tfr_logo 
-- duration: 10s
+        image: tfr_2020
+        scale: .25
+- duration: 5s
   slides:
     slide_lf_logo:
       widgets:
       - type: image
         image: lf_logo 
-- duration: 10s
+        scale: .5
+- duration: 5s
   slides:
     show_high_scores:
       widgets:
