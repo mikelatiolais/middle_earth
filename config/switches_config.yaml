@@ -17,13 +17,16 @@ switches:
     number: 3-0-19
   s_tilt_door_side:
     number: 3-0-20
+    tags: slam_tilt
   s_start_button:
     number: 3-0-21
     tags: start
   s_tilt_bob:
     number: 3-0-22
+    tags: tilt_warning
   s_tilt_cab:
     number: 3-0-23
+    tags: slam_tilt
 
   s_service_credit:
     number: 3-0-24

@@ -65,6 +65,7 @@ modes:
   - bottom_drop_complete
   - bonus
   - tilt
+  - match
   #- lizard_beast
   #- ape_beast
   #- escape
