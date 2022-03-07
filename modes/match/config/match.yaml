@@ -1,5 +1,4 @@
-##! mode: match
-# in modes/match/config/match.yaml
+#config_version=5
 queue_relay_player:
   match_no_match:
     post: no_match
