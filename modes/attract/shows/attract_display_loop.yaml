@@ -45,11 +45,7 @@
         style: text_default
         anchor_y: top
         anchor_x: right
-<<<<<<< HEAD
-        x: 20
-=======
         x: 150
->>>>>>> ce4f6bee11e9e31a646bfa6b9e46344116587cef
         y: top-70
       - type: Text
         text: (machine|player2_score)
@@ -67,11 +63,7 @@
         style: text_default
         anchor_y: bottom
         anchor_x: right
-<<<<<<< HEAD
-        x: 100
-=======
         x: 150
->>>>>>> ce4f6bee11e9e31a646bfa6b9e46344116587cef
         y: bottom+50
       - type: Text
         text: (machine|player4_score)
