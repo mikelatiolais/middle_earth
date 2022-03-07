@@ -51,6 +51,8 @@ sound_player:
 
   sw_drop_target_active: laser13
 
+  sw_tilt_warning_active: warning_voice
+
   # drop target 
   mode_bottom_drop_complete_started:
     danger:
