@@ -175,3 +175,9 @@ widget_styles:
     x: center+90
     number_grouping: true
     min_digits: 1
+  text_small:
+    font_size: 20
+    color: red
+  text_default:
+    font_size: 30
+    color: blue

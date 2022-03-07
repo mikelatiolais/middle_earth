@@ -1,48 +1,48 @@
 #show_version=5
 - duration: 5s
   slides:
-        last_game_scores:
-    - type: text
-      text: (machine|player1_score)
-      number_grouping: true
-      min_digits: 2
-      style: dmd_small
-      anchor_y: top
-      anchor_x: right
-      x: right-80
-      y: top-1
-    - type: text
-      text: (machine|player2_score)
-      number_grouping: true
-      min_digits: 2
-      style: dmd_small
-      anchor_y: top
-      anchor_x: right
-      x: right-1
-      y: top-1
-    - type: text
-      text: (machine|player3_score)
-      number_grouping: true
-      min_digits: 2
-      style: dmd_small
-      anchor_y: bottom
-      anchor_x: right
-      x: right-80
-      y: bottom+10
-    - type: text
-      text: (machine|player4_score)
-      number_grouping: true
-      min_digits: 2
-      style: dmd_small
-      anchor_y: bottom
-      anchor_x: right
-      x: right-1
-      y: bottom+10
-    - type: text
-      text: (machine|credits_string)
-      style: dmd_small
-      anchor_y: bottom
-      y: bottom
+    last_game_scores:
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        style: dmd_small
+        anchor_y: top
+        anchor_x: right
+        x: right-80
+        y: top-1
+      - type: text
+        text: (machine|player2_score)
+        number_grouping: true
+        min_digits: 2
+        style: dmd_small
+        anchor_y: top
+        anchor_x: right
+        x: right-1
+        y: top-1
+      - type: text
+        text: (machine|player3_score)
+        number_grouping: true
+        min_digits: 2
+        style: dmd_small
+        anchor_y: bottom
+        anchor_x: right
+        x: right-80
+        y: bottom+10
+      - type: text
+        text: (machine|player4_score)
+        number_grouping: true
+        min_digits: 2
+        style: dmd_small
+        anchor_y: bottom
+        anchor_x: right
+        x: right-1
+        y: bottom+10
+      - type: text
+        text: (machine|credits_string)
+        style: dmd_small
+        anchor_y: bottom
+        y: bottom
     show_high_scores:
       widgets:
       - type: Text
