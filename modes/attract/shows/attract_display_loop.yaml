@@ -1,6 +1,32 @@
 #show_version=5
 - duration: 5s
   slides:
+    slide_tfr_logo:
+      widgets:
+      - type: image
+        image: tfr_2020
+        scale: .25
+- duration: 5s
+  slides:
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+        scale: .5
+- duration: 5s
+  slides:
+    show_high_scores:
+      widgets:
+      - type: Text
+        text: PRESENTS...
+        font_size: 60
+        bold: true
+        anchor_x: center
+        anchor_y: center
+        x: center
+        y: top-50
+- duration: 5s
+  slides:
     last_game_scores:
       - type: text
         text: (machine|player1_score)
@@ -9,6 +35,8 @@
         style: text_small
         anchor_y: top
         anchor_x: right
+        x: 0
+        y: top-70
       - type: text
         text: (machine|player2_score)
         number_grouping: true
@@ -16,7 +44,7 @@
         style: text_small
         anchor_y: top
         anchor_x: right
-        x: center-50
+        x: right-1
         y: top-70
       - type: text
         text: (machine|player3_score)
@@ -25,8 +53,8 @@
         style: text_small
         anchor_y: bottom
         anchor_x: right
-        x: center-100
-        y: bottom+10
+        x: 0
+        y: bottom+50
       - type: text
         text: (machine|player4_score)
         number_grouping: true
@@ -35,11 +63,12 @@
         anchor_y: bottom
         anchor_x: right
         x: right-1
-        y: bottom+10
+        y: bottom+50
       - type: text
         text: (machine|credits_string)
         style: text_small
         anchor_y: bottom
+        x: center
         y: bottom
     show_high_scores:
       widgets:
@@ -107,29 +136,3 @@
         text: (machine|loops1_value)
         style: attract_mode_high_score_display_score
         y: top-320
-- duration: 5s
-  slides:
-    slide_tfr_logo:
-      widgets:
-      - type: image
-        image: tfr_2020
-        scale: .25
-- duration: 5s
-  slides:
-    slide_lf_logo:
-      widgets:
-      - type: image
-        image: lf_logo 
-        scale: .5
-- duration: 5s
-  slides:
-    show_high_scores:
-      widgets:
-      - type: Text
-        text: PRESENTS...
-        font_size: 60
-        bold: true
-        anchor_x: center
-        anchor_y: center
-        x: center
-        y: top-50
