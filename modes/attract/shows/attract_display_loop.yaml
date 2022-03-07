@@ -8,13 +8,6 @@
         scale: .25
 - duration: 5s
   slides:
-    slide_lf_logo:
-      widgets:
-      - type: image
-        image: lf_logo 
-        scale: .5
-- duration: 5s
-  slides:
     show_high_scores:
       widgets:
       - type: Text
@@ -27,49 +20,53 @@
         y: top-50
 - duration: 5s
   slides:
-    last_game_scores:
-      - type: text
-        text: (machine|player1_score)
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+        scale: .5
+- duration: 5s
+  slides:
+    show_last_scores:
+      widgets:
+      - type: Text
+        text: (player1_score)
         number_grouping: true
-        min_digits: 2
+        min_digits: 4
         style: text_small
         anchor_y: top
         anchor_x: right
         x: 0
         y: top-70
-      - type: text
-        text: (machine|player2_score)
+      - type: Text
+        text: (player2_score)
         number_grouping: true
-        min_digits: 2
+        min_digits: 4
         style: text_small
         anchor_y: top
         anchor_x: right
         x: right-1
         y: top-70
-      - type: text
-        text: (machine|player3_score)
+      - type: Text
+        text: (player3_score)
         number_grouping: true
-        min_digits: 2
+        min_digits: 4
         style: text_small
         anchor_y: bottom
         anchor_x: right
         x: 0
         y: bottom+50
-      - type: text
-        text: (machine|player4_score)
+      - type: Text
+        text: (player4_score)
         number_grouping: true
-        min_digits: 2
+        min_digits: 4
         style: text_small
         anchor_y: bottom
         anchor_x: right
         x: right-1
         y: bottom+50
-      - type: text
-        text: (machine|credits_string)
-        style: text_small
-        anchor_y: bottom
-        x: center
-        y: bottom
+- duration: 5s
+  slides: 
     show_high_scores:
       widgets:
       - type: Text
