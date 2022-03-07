@@ -1,19 +1,12 @@
 #show_version=5
-- duration: 5s
+- duration: 1s
   slides:
     slide_tfr_logo:
       widgets:
       - type: image
         image: tfr_2020
         scale: .25
-- duration: 5s
-  slides:
-    slide_lf_logo:
-      widgets:
-      - type: image
-        image: lf_logo 
-        scale: .5
-- duration: 5s
+- duration: 1s
   slides:
     show_high_scores:
       widgets:
@@ -25,51 +18,72 @@
         anchor_y: center
         x: center
         y: top-50
+- duration: 1s
+  slides:
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+        scale: .5
 - duration: 5s
   slides:
-    last_game_scores:
-      - type: text
+    show_last_scores:
+      widgets:
+      - type: Text
+        text: SCORES
+        number_grouping: true
+        min_digits: 4
+        style: text_default
+        anchor_y: top
+        anchor_x: right
+        x: center
+        y: top
+      - type: Text
         text: (machine|player1_score)
         number_grouping: true
-        min_digits: 2
-        style: text_small
+        min_digits: 4
+        style: text_default
         anchor_y: top
         anchor_x: right
+<<<<<<< HEAD
         x: 20
+=======
+        x: 150
+>>>>>>> ce4f6bee11e9e31a646bfa6b9e46344116587cef
         y: top-70
-      - type: text
+      - type: Text
         text: (machine|player2_score)
         number_grouping: true
-        min_digits: 2
-        style: text_small
+        min_digits: 4
+        style: text_default
         anchor_y: top
         anchor_x: right
         x: right-1
         y: top-70
-      - type: text
+      - type: Text
         text: (machine|player3_score)
         number_grouping: true
-        min_digits: 2
-        style: text_small
+        min_digits: 4
+        style: text_default
         anchor_y: bottom
         anchor_x: right
+<<<<<<< HEAD
         x: 100
+=======
+        x: 150
+>>>>>>> ce4f6bee11e9e31a646bfa6b9e46344116587cef
         y: bottom+50
-      - type: text
+      - type: Text
         text: (machine|player4_score)
         number_grouping: true
-        min_digits: 2
-        style: text_small
+        min_digits: 4
+        style: text_default
         anchor_y: bottom
         anchor_x: right
         x: right-1
         y: bottom+50
-      - type: text
-        text: (machine|credits_string)
-        style: text_small
-        anchor_y: bottom
-        x: center
-        y: bottom
+- duration: 5s
+  slides: 
     show_high_scores:
       widgets:
       - type: Text

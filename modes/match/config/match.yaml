@@ -30,14 +30,34 @@ slides:
       text: MATCH
     - type: text
       text: "Player 1: (match_number0)"
+      anchor_x: center
+      anchor_y: center
+      x: 0
+      y: top-50
     - type: text
       text: "Player 2: (match_number1)"
+      anchor_x: center
+      anchor_y: center
+      x: right
+      y: top-50
     - type: text
       text: "Player 3: (match_number2)"
+      anchor_x: center
+      anchor_y: center
+      x: 0
+      y: bottom+50
     - type: text
       text: "Player 4: (match_number3)"
+      anchor_x: center
+      anchor_y: center
+      x: right
+      y: bottom+50
     - type: text
       text: "Match number: (winner_number)"
+      anchor_x: center
+      anchor_y: center
+      x: center
+      y: center
   no_match_slide:
     - type: text
       text: NO MATCH
