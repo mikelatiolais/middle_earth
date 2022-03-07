@@ -181,3 +181,6 @@ widget_styles:
   text_default:
     font_size: 30
     color: blue
+  text_large:
+    font_size: 70
+    color: red
