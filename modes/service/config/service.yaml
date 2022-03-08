@@ -1,4 +1,20 @@
 #config_version=5
+# you need to define a "sfx" sound track because the service mode brings some sounds (see the sound documentation for details)
+sound_system:
+  tracks:
+    music:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 0.5
+    voice:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 0.7
+    sfx:
+      type: standard
+      simultaneous_sounds: 8
+      volume: 0.4
+# additionally you need to define some slide styles which are used in the mode
 widget_styles:
   medium:
     font_name: pixelmix
