@@ -106,9 +106,6 @@ player_vars:
   playfield_bonus:
     initial_value: 0
     value_type: int
-  playfield_bonus_multiplier:
-    initial_value: 1
-    value_type: int
   bonus_multiplier:
     initial_value: 1
     value_type: int
