@@ -81,6 +81,14 @@ show_player:
       show_tokens:
         led1: l_double_bonus
         led2: l_triple_bonus
+ 
+  # Ball start reset
+  ball_started:
+    bonus_lamps_off:
+      show_tokens:
+        led1: l_double_bonus
+        led2: l_triple_bonus
+      
 
 light_player:
   # The center bonus lamps
@@ -310,6 +318,15 @@ variable_player:
   loop_done{count==3}:
     pf_multiplier:
       int: 6
+      action: set
+
+  # Ball start reset
+  ball_started:
+    pf_multiplier:
+      int: 1
+      action: set
+    playfield_bonus:
+      int: 0
       action: set
 
 shot_profiles:
