@@ -13,6 +13,7 @@ ball_saves:
     balls_to_save: 1
 
 counters:
+  # The counter used for the loops
   loop_complete_count:
     count_events: shot_loop_rollover_hit
     events_when_hit: loop_done
@@ -21,17 +22,20 @@ counters:
     persist_state: false
 
 shows:
+  # Turn one of the bonus lamps on
   bonus_lamp_on:
     - time: 0
       lights:
         (led1): white
 
+  # Turn both bonus lamps on
   bonus_both_lamps_on:
     - time: 0
       lights:
         (led1): white
         (led2): white
-  
+
+  # Turn both bonus lamps off
   bonus_lamps_off:
     - time: 0
       lights:
@@ -56,10 +60,13 @@ show_player:
   ball_save_ball_save_ball_save_disabled:
     ball_save: stop
 
+  # Bonus lamp system
+  # First loop
   loop_done{count==1}:
     bonus_lamp_on:
       show_tokens:
         led1: l_double_bonus
+  # Second loop
   loop_done{count==2}:
     bonus_lamps_off:
       show_tokens:
@@ -68,11 +75,39 @@ show_player:
     bonus_lamp_on:
       show_tokens:
         led1: l_triple_bonus
+  # Third loop
   loop_done{count==3}:
     bonus_both_lamps_on:
       show_tokens:
         led1: l_double_bonus
         led2: l_triple_bonus
+
+light_player:
+  # The center bonus lamps
+  "{current_player.playfield_bonus >= 1000}":
+    l_1000_center_bonus: red
+  "{current_player.playfield_bonus >= 2000}":
+    l_2000_center_bonus: red
+  "{current_player.playfield_bonus >= 3000}":
+    l_3000_center_bonus: red
+  "{current_player.playfield_bonus >= 4000}":
+    l_4000_center_bonus: red
+  "{current_player.playfield_bonus >= 5000}":
+    l_5000_center_bonus: red
+  "{current_player.playfield_bonus >= 6000}":
+    l_6000_center_bonus: red
+  "{current_player.playfield_bonus >= 7000}":
+    l_7000_center_bonus: red
+  "{current_player.playfield_bonus >= 8000}":
+    l_8000_center_bonus: red
+  "{current_player.playfield_bonus >= 9000}":
+    l_9000_center_bonus: red
+  "{current_player.playfield_bonus >= 10000}":
+    l_10000_center_bonus: red
+  "{current_player.playfield_bonus >= 20000}":
+    l_20000_center_bonus: red
+  "{current_player.playfield_bonus >= 40000}":
+    l_double_bonus_center: red
 
 sounds:
   main_theme:
@@ -132,15 +167,6 @@ sound_player:
 slide_player:
   mode_base_started:
     widgets:
-      - type: text
-        text: Bonus (pf_multiplier)
-        y: top
-        x: center
-        anchor_x: right
-        anchor_y: bottom
-        font_name: Greenscr
-        color: green
-        font_size: 30
       - type: text
         text: (score)
         number_grouping: true
@@ -218,11 +244,11 @@ variable_player:
 
   # Bumpers
   s_left_bumper_active:
-    score: 100
+    score: (100 * current_player.pf_multiplier)
     left_bumper_hits: 1
     total_bumper_hits: 1
   s_right_bumper_active:
-    score: 100
+    score: (100 * current_player.pf_multiplier)
     right_bumper_hits: 1
     total_bumper_hits: 1
 
@@ -270,15 +296,17 @@ variable_player:
   shot_bonus_standup_hit:
     playfield_bonus: (500 * current_player.pf_multiplier)
 
-  # If the bonus multiplier is one or two, then add one
+  # First loop, set the multiplier to 2x
   loop_done{count==1}:
     pf_multiplier:
       int: 2
       action: set
+  # Second loop, set it to 2x
   loop_done{count==2}:
     pf_multiplier:
       int: 3
       action: set
+  # Third loop, set it to 6x
   loop_done{count==3}:
     pf_multiplier:
       int: 6
