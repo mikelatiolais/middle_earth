@@ -6,5 +6,10 @@ mode:
 
 variable_player:
 
+sounds:
+  demo_man_main_theme:
+    volume: 0.50
+    priority: 100
+
 
 
