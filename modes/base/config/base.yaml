@@ -83,7 +83,7 @@ show_player:
         led2: l_triple_bonus
  
   # Ball start reset
-  ball_started:
+  mode_base_started:
     bonus_lamps_off:
       show_tokens:
         led1: l_double_bonus
@@ -321,7 +321,7 @@ variable_player:
       action: set
 
   # Ball start reset
-  ball_started:
+  mode_base_started:
     pf_multiplier:
       int: 1
       action: set
