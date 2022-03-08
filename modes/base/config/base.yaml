@@ -374,6 +374,8 @@ shots:
     profile: base_rollovers
     show_tokens:
       light: l_bonus_rollover
+    delay_switch:
+      s_rollthru_rollover: 2s
   shot_left_upper_rollover:
     switch: s_left_upper_rollover
     profile: base_rollovers
