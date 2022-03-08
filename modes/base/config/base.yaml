@@ -12,6 +12,14 @@ ball_saves:
     auto_launch: true
     balls_to_save: 1
 
+counters:
+  loop_complete_count:
+    count_events: shot_loop_rollover_hit
+    events_when_hit: loop_done
+    starting_count: 1
+    direction: up
+    persist_state: false
+
 show_player:
   ball_save_ball_save_ball_save_timer_start:
     flash_color:
@@ -30,15 +38,15 @@ show_player:
   ball_save_ball_save_ball_save_disabled:
     ball_save: stop
 
-  shoot_loop_rollover_done{count==1}:
+  loop_done{count==1}:
     Playfield_2x_on:
       show_tokens:
         light: l_double_bonus
-  shoot_loop_rollover_done{count==2}:
+  loop_done{count==2}:
     Playfield_2x_on:
       show_tokens:
         light: l_triple_bonus
-  shoot_loop_rollover_done{count==3}:
+  loop_done{count==3}:
     Playfield_2x_on:
       show_tokens:
         light: l_double_bonus, l_triple_bonus
@@ -102,7 +110,7 @@ slide_player:
   mode_base_started:
     widgets:
       - type: text
-        text: Bonus (playfield_multiplier)
+        text: Bonus (pf_multiplier)
         y: top
         x: center
         anchor_x: right
@@ -136,13 +144,6 @@ slide_player:
         color: green
         font_size: 50
 
-counters:
-  lb_pfm_complete_count:
-    count_events: shot_loop_rollover_hit
-    events_when_hit: shot_loop_rollover_hit
-    starting_count: 1
-    direction: up
-    persist_state: false
 
 variable_player:
   # Lower playfield
@@ -150,13 +151,13 @@ variable_player:
     score: 20 
   s_right_sling_active:
     score: 20 
-    playfield_bonus: (50 * current_player.playfield_multiplier)
+    playfield_bonus: (50 * current_player.pf_multiplier)
   s_left_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.playfield_multiplier)
+    playfield_bonus: (100 * current_player.pf_multiplier)
   s_right_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.playfield_multiplier)
+    playfield_bonus: (100 * current_player.pf_multiplier)
   s_left_lower_pf_rollover_active:
     score: 50
   s_right_lower_pf_rollover_active:
@@ -190,7 +191,7 @@ variable_player:
   # Behind drops
   s_behind_drops_active:
     score: 100
-    playfield_bonus: (50 * current_player.playfield_multiplier)
+    playfield_bonus: (50 * current_player.pf_multiplier)
 
   # Bumpers
   s_left_bumper_active:
@@ -213,10 +214,10 @@ variable_player:
   # Upper Playfield
   s_left_upper_rollover_active:
     score: 50
-    playfield_bonus: (50 * current_player.playfield_multiplier)
+    playfield_bonus: (50 * current_player.pf_multiplier)
   s_right_upper_rollover_active:
     score: 50
-    playfield_bonus: (50 * current_player.playfield_multiplier)
+    playfield_bonus: (50 * current_player.pf_multiplier)
   s_10_pt_active:
     score: 100
   s_lower_left_target_active:
@@ -225,7 +226,7 @@ variable_player:
     score: 200
   s_target_front_rollover_active:
     score: 500
-    playfield_bonus: (500* current_player.playfield_multiplier)
+    playfield_bonus: (500* current_player.pf_multiplier)
   s_upper_left_target_active:
     score: 200
   s_upper_right_target_active:
@@ -238,25 +239,25 @@ variable_player:
   # Bonus
   drop_target_bank_lower_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.playfield_multiplier)
+    playfield_bonus: (500 * current_player.pf_multiplier)
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.playfield_multiplier)
+    playfield_bonus: (500 * current_player.pf_multiplier)
 
   shot_bonus_standup_hit:
-    playfield_bonus: (500 * current_player.playfield_multiplier)
+    playfield_bonus: (500 * current_player.pf_multiplier)
 
   # If the bonus multiplier is one or two, then add one
-  shot_loop_rollover_hit{count==1}:
-    playfield_multiplier:
+  loop_done{count==1}:
+    pf_multiplier:
       int: 2
       action: set
-  shot_loop_rollover_hit{count==2}:
-    playfield_multiplier:
+  loop_done{count==2}:
+    pf_multiplier:
       int: 3
       action: set
-  shot_loop_rollover_hit{count==3}:
-    playfield_multiplier:
+  loop_done{count==3}:
+    pf_multiplier:
       int: 6
       action: set
 
@@ -325,10 +326,3 @@ shots:
     profile: base_rollovers
     show_tokens:
       light: l_bottom_right_rollover
-
-accruals:
-  pf_multiplier:
-    events:
-      - shot_loop_rollover_hit
-    events_when_complete: increase_multiplier, light_bonus_led
-    start_enabled: true
