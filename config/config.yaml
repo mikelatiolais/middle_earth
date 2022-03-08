@@ -184,3 +184,18 @@ widget_styles:
   text_large:
     font_size: 70
     color: red
+
+event_player:
+  ball_starting:
+    - cmd_flippers_enable
+    - cmd_autofire_coils_enable
+    - cmd_drop_targets_reset
+  ball_ending:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable
+  tilt:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable
+  slam_tilt:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable

@@ -158,30 +158,33 @@ variable_player:
   # Behind drops
   s_behind_drops_active:
     score: 100
+    playfield_bonus: (50 * current_player.playfield_bonus_multiplier)
 
   # Bumpers
   s_left_bumper_active:
-    score: 10
+    score: 100
     left_bumper_hits: 1
     total_bumper_hits: 1
   s_right_bumper_active:
-    score: 10
+    score: 100
     right_bumper_hits: 1
     total_bumper_hits: 1
 
   # Spinners
   s_right_spinner_active:
-    score: 10
+    score: 100
     total_spinner_hits: 1
   s_left_spinner_active:
-    score: 10
+    score: 100
     total_spinner_hits: 1
 
   # Upper Playfield
   s_left_upper_rollover_active:
     score: 50
+    playfield_bonus: (50 * current_player.playfield_bonus_multiplier)
   s_right_upper_rollover_active:
     score: 50
+    playfield_bonus: (50 * current_player.playfield_bonus_multiplier)
   s_10_pt_active:
     score: 10
   s_lower_left_target_active:
@@ -203,8 +206,13 @@ variable_player:
   # Bonus
   drop_target_bank_lower_bank_down:
     total_drop_complete: 1
+    playfield_bonus: (500 * current_player.playfield_bonus_multiplier)
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
+    playfield_bonus: (500 * current_player.playfield_bonus_multiplier)
+
+  shot_bonus_standup_hit:
+    playfield_bonus: (500 * current_player.playfield_bonus_multiplier)
 
 shot_profiles:
   base_standup_targets:
