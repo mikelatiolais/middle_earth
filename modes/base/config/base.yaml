@@ -43,21 +43,21 @@ shows:
         (led2): off
 
 show_player:
-  bs_base_timer_start:
+  ball_save_bs_base_timer_start:
     flash_color:
       key: ball_save
       speed: 2
       show_tokens:
         lights: l_shoot_again_1, l_shoot_again_2
         color: red
-  bs_base_hurry_up:
+  ball_save_bs_base_hurry_up:
     flash_color:
       key: ball_save
       speed: 4
       show_tokens:
         lights: l_shoot_again_1, l_shoot_again_2
         color: red
-  bs_base_save_disabled:
+  ball_save_bs_base_disabled:
     ball_save: stop
 
   # Bonus lamp system
@@ -166,7 +166,7 @@ sound_player:
       volume: 1
       loops: 0
 
-  ball_save_saving_ball:
+  ball_save_bs_base_saving_ball:
     ball_saved_voice:
       volume: 1
       loops: 0
