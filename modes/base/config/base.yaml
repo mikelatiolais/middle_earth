@@ -208,13 +208,13 @@ variable_player:
     score: (20 * current_player.pf_multiplier)
   s_right_sling_active:
     score: (20 * current_player.pf_multiplier)
-    playfield_bonus: (50 * current_player.pf_multiplier)
+    playfield_bonus: 50
   s_left_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.pf_multiplier)
+    playfield_bonus: 100
   s_right_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.pf_multiplier)
+    playfield_bonus: 100
   s_left_lower_pf_rollover_active:
     score: (50 * current_player.pf_multiplier)
   s_right_lower_pf_rollover_active:
@@ -248,7 +248,7 @@ variable_player:
   # Behind drops
   s_behind_drops_active:
     score: (100 * current_player.pf_multiplier)
-    playfield_bonus: (50 * current_player.pf_multiplier)
+    playfield_bonus: 50
 
   # Bumpers
   s_left_bumper_active:
@@ -271,10 +271,10 @@ variable_player:
   # Upper Playfield
   s_left_upper_rollover_active:
     score: (50 * current_player.pf_multiplier)
-    playfield_bonus: (50 * current_player.pf_multiplier)
+    playfield_bonus: 50
   s_right_upper_rollover_active:
     score: (50 * current_player.pf_multiplier)
-    playfield_bonus: (50 * current_player.pf_multiplier)
+    playfield_bonus: 50
   s_10_pt_active:
     score: (100 * current_player.pf_multiplier)
   s_lower_left_target_active:
@@ -283,7 +283,7 @@ variable_player:
     score: (200 * current_player.pf_multiplier)
   s_target_front_rollover_active:
     score: (500 * current_player.pf_multiplier)
-    playfield_bonus: (500* current_player.pf_multiplier)
+    playfield_bonus: 500
   s_upper_left_target_active:
     score: (200 * current_player.pf_multiplier)
   s_upper_right_target_active:
@@ -296,13 +296,13 @@ variable_player:
   # Bonus
   drop_target_bank_lower_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.pf_multiplier)
+    playfield_bonus: 500
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.pf_multiplier)
+    playfield_bonus: 500
 
   shot_bonus_standup_hit:
-    playfield_bonus: (500 * current_player.pf_multiplier)
+    playfield_bonus: 500
 
   # First loop, set the multiplier to 2x
   loop_done{count==1}:
