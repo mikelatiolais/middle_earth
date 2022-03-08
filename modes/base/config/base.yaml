@@ -90,7 +90,7 @@ slide_player:
       - type: text
         text: Bonus (playfield_multiplier)
         y: top
-        x: right-10
+        x: center
         anchor_x: right
         anchor_y: bottom
         font_name: Greenscr
