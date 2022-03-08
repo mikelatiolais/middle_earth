@@ -61,13 +61,13 @@ modes:
   - base
   - service
   - high_score
-  - top_drop_complete
-  - bottom_drop_complete
+  #- top_drop_complete
+  #- bottom_drop_complete
   - bonus
   - tilt
   #- match
-  #- lizard_beast
-  #- ape_beast
+  - lizard_beast
+  - ape_beast
   #- escape
   #- etc
 

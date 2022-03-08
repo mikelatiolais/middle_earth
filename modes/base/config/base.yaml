@@ -4,7 +4,7 @@ mode:
   priority: 100
 
 ball_saves:
-  ball_save_ball_save:
+  bs_base:
     active_time: 8s
     hurry_up_time: 3s
     grace_period: 2s
@@ -43,21 +43,21 @@ shows:
         (led2): off
 
 show_player:
-  ball_save_ball_save_ball_save_timer_start:
+  bs_base_timer_start:
     flash_color:
       key: ball_save
       speed: 2
       show_tokens:
         lights: l_shoot_again_1, l_shoot_again_2
         color: red
-  ball_save_ball_save_ball_save_hurry_up:
+  bs_base_hurry_up:
     flash_color:
       key: ball_save
       speed: 4
       show_tokens:
         lights: l_shoot_again_1, l_shoot_again_2
         color: red
-  ball_save_ball_save_ball_save_disabled:
+  bs_base_save_disabled:
     ball_save: stop
 
   # Bonus lamp system
@@ -143,30 +143,30 @@ sound_player:
   sw_tilt_warning_active: warning_voice
 
   # drop target 
-  mode_bottom_drop_complete_started:
-    danger:
-      volume: 0.25
-      loops: 0
-      fade_out: 0.0
-  drop_target_bank_lower_bank_up:
-    danger:
-      action: stop
+  #mode_bottom_drop_complete_started:
+  #  danger:
+  #    volume: 0.25
+  #    loops: 0
+  #    fade_out: 0.0
+  #drop_target_bank_lower_bank_up:
+  #  danger:
+  #    action: stop
 
-  mode_top_drop_complete_started:
-    danger:
-      volume: 0.25
-      loops: 0
-      fade_out: 0.0
-  drop_target_bank_upper_bank_up:
-    danger:
-      action: stop
+  #mode_top_drop_complete_started:
+  #  danger:
+  #    volume: 0.25
+  #    loops: 0
+  #    fade_out: 0.0
+  #drop_target_bank_upper_bank_up:
+  #  danger:
+  #    action: stop
 
   mode_base_started:
     landing_voice: 
       volume: 1
       loops: 0
 
-  ball_save_ball_save_ball_save_saving_ball:
+  ball_save_saving_ball:
     ball_saved_voice:
       volume: 1
       loops: 0

@@ -1,5 +1,10 @@
 #config_version=5
+mode:
+  start_events: drop_target_bank_upper_bank_down
+  stop_events: drop_target_bank_upper_bank_up
+  priority: 200
 
-#show_player:
-#  mode_attract_started: attract_light_loop
+variable_player:
+
+
 
