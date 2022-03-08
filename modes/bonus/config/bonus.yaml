@@ -2,7 +2,6 @@
 mode_settings:
   display_delay_ms: 1s
   hurry_up_delay_ms: 0
-  reset_player_score_entry: true
   bonus_entries:
     - event: bonus_drops
       score: 500 * (current_player.total_drop_complete)

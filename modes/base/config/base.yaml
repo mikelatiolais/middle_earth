@@ -88,7 +88,7 @@ slide_player:
   mode_base_started:
     widgets:
       - type: text
-        text: Bonus (bonus_multiplier)
+        text: Bonus (playfield_multiplier)
         y: top
         x: right-10
         anchor_x: right
@@ -128,13 +128,13 @@ variable_player:
     score: 20 
   s_right_sling_active:
     score: 20 
-    playfield_bonus: (50 * current_player.bonus_multiplier)
+    playfield_bonus: (50 * current_player.playfield_multiplier)
   s_left_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.bonus_multiplier)
+    playfield_bonus: (100 * current_player.playfield_multiplier)
   s_right_drain_rollover_active:
     score: 100
-    playfield_bonus: (100 * current_player.bonus_multiplier)
+    playfield_bonus: (100 * current_player.playfield_multiplier)
   s_left_lower_pf_rollover_active:
     score: 50
   s_right_lower_pf_rollover_active:
@@ -168,7 +168,7 @@ variable_player:
   # Behind drops
   s_behind_drops_active:
     score: 100
-    playfield_bonus: (50 * current_player.bonus_multiplier)
+    playfield_bonus: (50 * current_player.playfield_multiplier)
 
   # Bumpers
   s_left_bumper_active:
@@ -191,10 +191,10 @@ variable_player:
   # Upper Playfield
   s_left_upper_rollover_active:
     score: 50
-    playfield_bonus: (50 * current_player.bonus_multiplier)
+    playfield_bonus: (50 * current_player.playfield_multiplier)
   s_right_upper_rollover_active:
     score: 50
-    playfield_bonus: (50 * current_player.bonus_multiplier)
+    playfield_bonus: (50 * current_player.playfield_multiplier)
   s_10_pt_active:
     score: 100
   s_lower_left_target_active:
@@ -203,7 +203,7 @@ variable_player:
     score: 200
   s_target_front_rollover_active:
     score: 500
-    playfield_bonus: (500* current_player.bonus_multiplier)
+    playfield_bonus: (500* current_player.playfield_multiplier)
   s_upper_left_target_active:
     score: 200
   s_upper_right_target_active:
@@ -216,21 +216,21 @@ variable_player:
   # Bonus
   drop_target_bank_lower_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.bonus_multiplier)
+    playfield_bonus: (500 * current_player.playfield_multiplier)
   drop_target_bank_upper_bank_down:
     total_drop_complete: 1
-    playfield_bonus: (500 * current_player.bonus_multiplier)
+    playfield_bonus: (500 * current_player.playfield_multiplier)
 
   shot_bonus_standup_hit:
-    playfield_bonus: (500 * current_player.bonus_multiplier)
+    playfield_bonus: (500 * current_player.playfield_multiplier)
 
   # If the bonus multiplier is one or two, then add one
-  increase_multiplier{current_player.bonus_multiplier <= 2}
-    bonus_multiplier: 1
+    increase_multiplier{current_player.playfield_multiplier <= 2}:
+      playfield_multiplier: 1
 
   # If the bonus multiplier is already three, then add 3
-  increase_multiplier{current_player.bonus_multiplier == 3}
-    bonus_multiplier: 3
+    increase_multiplier{current_player.playfield_multiplier == 3}:
+      playfield_multiplier: 3
 
 shot_profiles:
   base_standup_targets:
@@ -299,7 +299,7 @@ shots:
       light: l_bottom_right_rollover
 
 accruals:
-  bonus_multiplier:
+  playfield_multiplier:
     events:
       - shot_loop_rollover_hit
     events_when_complete: increase_multiplier, light_bonus_led
