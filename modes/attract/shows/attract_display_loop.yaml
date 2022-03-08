@@ -1,12 +1,12 @@
 #show_version=5
-- duration: 1s
+- duration: 2s
   slides:
     slide_tfr_logo:
       widgets:
       - type: image
         image: tfr_2020
         scale: .25
-- duration: 1s
+- duration: 2s
   slides:
     show_high_scores:
       widgets:
@@ -18,14 +18,14 @@
         anchor_y: center
         x: center
         y: top-50
-- duration: 1s
+- duration: 2s
   slides:
     slide_lf_logo:
       widgets:
       - type: image
         image: lf_logo 
         scale: .5
-- duration: 5s
+- duration: 3s
   slides:
     show_last_scores:
       widgets:
@@ -74,7 +74,7 @@
         anchor_x: right
         x: right-1
         y: bottom+50
-- duration: 5s
+- duration: 3s
   slides: 
     show_high_scores:
       widgets:
