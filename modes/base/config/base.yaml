@@ -29,6 +29,19 @@ show_player:
   ball_save_ball_save_ball_save_disabled:
     ball_save: stop
 
+  shoot_loop_rollover_done{count==1}:
+    Playfield_2x_on:
+      show_tokens:
+        light: l_double_bonus
+  shoot_loop_rollover_done{count=2}:
+    Playfield_2x_on:
+      show_tokens:
+        light: l_triple_bonus
+  shoot_loop_rollover_done{count=3}:
+    Playfield_2x_on:
+      show_tokens:
+        light: l_double_bonus, l_triple_bonus
+
 sounds:
   main_theme:
     volume: 0.50
