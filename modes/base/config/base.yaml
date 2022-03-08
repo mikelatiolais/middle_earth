@@ -225,12 +225,18 @@ variable_player:
     playfield_bonus: (500 * current_player.playfield_multiplier)
 
   # If the bonus multiplier is one or two, then add one
-    increase_multiplier{current_player.playfield_multiplier <= 2}:
-      playfield_multiplier: 1
-
-  # If the bonus multiplier is already three, then add 3
-    increase_multiplier{current_player.playfield_multiplier == 3}:
-      playfield_multiplier: 3
+  shot_loop_rollover_done{count==1}:
+    playfield_multiplier:
+      int: 2
+      action: set
+  shot_loop_rollover_done{count==2}:
+    playfield_multiplier:
+      int: 3
+      action: set
+  shot_loop_rollover_done{count==3}:
+    playfield_multiplier:
+      int: 6
+      action: set
 
 shot_profiles:
   base_standup_targets:
