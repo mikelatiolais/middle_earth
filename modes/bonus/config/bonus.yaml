@@ -7,6 +7,7 @@ mode_settings:
       score: 500 * (current_player.total_drop_complete)
     - event: bonus_playfield
       score: (current_player.playfield_bonus)
+      reset_player_score_entry: true
 
 sound_player:
   mode_bonus_started:
