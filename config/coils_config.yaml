@@ -1,5 +1,7 @@
 #config_version=5
 
+# The coils are based on two boards, a Cobrapin and a Cobrapin expansion board
+# Author - Michael Latiolais
 coils:
 
   # Coils
@@ -48,16 +50,12 @@ autofire_coils:
   left_slingshot:
     coil: c_left_slingshot
     switch: s_left_sling
-    #enable_events: machine_reset_phase_3
   right_slingshot:
     coil: c_right_slingshot
     switch: s_right_sling
-    #enable_events: machine_reset_phase_3
   left_bumper:
     coil: c_left_bumper
     switch: s_left_bumper
-    #enable_events: machine_reset_phase_3
   right_bumper:
     coil: c_right_bumper
     switch: s_right_bumper
-    #enable_events: machine_reset_phase_3

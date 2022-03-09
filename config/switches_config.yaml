@@ -1,5 +1,7 @@
 #config_version=5
 
+# Main switch configuration, based on Cobrapin and Expansion board
+# Author - Michael Latiolais
 switches:
 
   #DIRECT SWITCHES

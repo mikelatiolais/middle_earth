@@ -1,4 +1,11 @@
 #config_version=5
+
+# Ape Beast attack mode
+# Author - Michael Latiolais
+
+# Starts with dropping the upper bank
+# TODO - Add timer
+# TODO - Add counter for spinner hits
 mode:
   start_events: drop_target_bank_upper_bank_down
   stop_events: drop_target_bank_upper_bank_up
@@ -6,10 +13,8 @@ mode:
 
 variable_player:
 
-sounds:
-  demo_man_main_theme:
-    volume: 0.50
-    priority: 100
-
-
-
+sound_player:
+  mode_ape_beast_started:
+    attack_is_imminent_voice:
+      volume: 1
+      loops: 0

@@ -1,6 +1,7 @@
 #config_version=5
 
-#Middle Earth Cobrapin Config
+# Middle Earth Cobrapin Config
+# Primary programmer: Michael Latiolais
 
 hardware:
   platform: opp

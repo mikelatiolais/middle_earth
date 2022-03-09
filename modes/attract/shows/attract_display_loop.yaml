@@ -1,30 +1,9 @@
 #show_version=5
-- duration: 2s
-  slides:
-    slide_tfr_logo:
-      widgets:
-      - type: image
-        image: tfr_2020
-        scale: .25
-- duration: 2s
-  slides:
-    show_high_scores:
-      widgets:
-      - type: Text
-        text: PRESENTS...
-        font_size: 60
-        bold: true
-        anchor_x: center
-        anchor_y: center
-        x: center
-        y: top-50
-- duration: 2s
-  slides:
-    slide_lf_logo:
-      widgets:
-      - type: image
-        image: lf_logo 
-        scale: .5
+# This is the show for the LCD display in attract mode.
+# It shows a series of slides and images
+# Author - Michael Latiolais
+
+# Slide 1 is the scares from the last played game
 - duration: 3s
   slides:
     show_last_scores:
@@ -74,6 +53,37 @@
         anchor_x: right
         x: right-1
         y: bottom+50
+# The Flipper Room logo
+- duration: 2s
+  slides:
+    slide_tfr_logo:
+      widgets:
+      - type: image
+        image: tfr_2020
+        scale: .25
+# The Presents slide
+- duration: 2s
+  slides:
+    show_high_scores:
+      widgets:
+      - type: Text
+        text: PRESENTS...
+        font_size: 60
+        bold: true
+        anchor_x: center
+        anchor_y: center
+        x: center
+        y: top-50
+# The Little Flippers logo
+- duration: 2s
+  slides:
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+        scale: .5
+# High scores
+# currently also shows the loop champion, though there is no counter for it in the game yet
 - duration: 3s
   slides: 
     show_high_scores:

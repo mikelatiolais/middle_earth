@@ -1,5 +1,7 @@
 #config_version=5
 
+# Devices used in the main configuration
+# Author - Michael Latiolais
 flippers:
   left_flipper:
     main_coil: c_flipper_left

@@ -1,4 +1,7 @@
 #config_version=5
+
+# End Ball Bonus 
+# Author - Michael Latiolais
 mode_settings:
   display_delay_ms: 1s
   hurry_up_delay_ms: 0
@@ -8,6 +11,7 @@ mode_settings:
     - event: bonus_playfield
       score: (current_player.playfield_bonus)
 
+# Voice over for calculating bonus
 sound_player:
   mode_bonus_started:
     calculating_bonus_voice:

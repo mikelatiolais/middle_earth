@@ -1,5 +1,9 @@
 #config_version=5
 
+# Main attract mode
+# Author - Michael Latiolais
+
+# Start the display and light show loops
 show_player:
   mode_attract_started: 
     attract_light_loop:

@@ -1,14 +1,20 @@
 #config_version=5
+
+# Base mode
+# Author - Michael Latiolais
+
+# Mode starts with a new ball
 mode:
   start_events: ball_started
   priority: 100
 
+# Set up initial ball save
 ball_saves:
   bs_base:
     active_time: 8s
     hurry_up_time: 3s
     grace_period: 2s
-    timer_start_events: sw_playfield_active
+    timer_start_events: sw_playfield_active, sw_bumper_active, sw_standup_active, sw_rollover_active
     auto_launch: true
     balls_to_save: 1
 
@@ -43,6 +49,7 @@ shows:
         (led2): off
 
 show_player:
+  # Ball save lamp show
   ball_save_bs_base_timer_start:
     flash_color:
       key: ball_save
@@ -61,12 +68,13 @@ show_player:
     ball_save: stop
 
   # Bonus lamp system
-  # First loop
+  # First loop, light double bonus
+  # This is based on the counter defined in this file
   loop_done{count==1}:
     bonus_lamp_on:
       show_tokens:
         led1: l_double_bonus
-  # Second loop
+  # Second loop, turn off bonus lamps and light triple
   loop_done{count==2}:
     bonus_lamps_off:
       show_tokens:
@@ -75,7 +83,7 @@ show_player:
     bonus_lamp_on:
       show_tokens:
         led1: l_triple_bonus
-  # Third loop
+  # Third loop, light both bonus lamps
   loop_done{count==3}:
     bonus_both_lamps_on:
       show_tokens:
@@ -84,6 +92,7 @@ show_player:
  
   # Ball start reset
   mode_base_started:
+    # Turn off bonus lamps during the start of the ball
     bonus_lamps_off:
       show_tokens:
         led1: l_double_bonus
@@ -92,6 +101,9 @@ show_player:
 
 light_player:
   # The center bonus lamps
+  # As the playfield_bonus reaches each threshold number, a new lamp is lit, starting at 
+  # 1000 points
+  # These go away when the playfield_bonus is reset
   "{current_player.playfield_bonus >= 1000}":
     l_1000_center_bonus: red
   "{current_player.playfield_bonus >= 2000}":
@@ -124,22 +136,32 @@ sounds:
 
 sound_player:
   # Base mode sound effects
+  # Most are based on tags
+  # Any bumper
   sw_bumper_active: laser5
 
+  # Any spinner
   sw_spinner_active: laser10
   
+  # Any standup
   sw_standup_active: laser_gun_2
 
+  # Since the 10 pt switches are all wired together, we use the switch event and not a tag
   s_10_pt_active: laser12
 
+  # Any sling
   sw_sling_active: laser13
   
+  # Any rollover
   sw_rollover_active: activate_1
 
+  # Any drain rollover
   sw_drain_active: complain_1
 
+  # Any drop target hit
   sw_drop_target_active: laser13
 
+  # First tilt warning
   sw_tilt_warning_active: warning_voice
 
   # drop target 
@@ -161,11 +183,14 @@ sound_player:
   #  danger:
   #    action: stop
 
+  # Initial voice over
+  # TODO - change this to only run on ball 1
   mode_base_started:
     landing_voice: 
       volume: 1
       loops: 0
 
+  # Ball save voice
   ball_save_bs_base_saving_ball:
     ball_saved_voice:
       volume: 1
@@ -173,6 +198,8 @@ sound_player:
     
 
 slide_player:
+  # Main display
+  # TODO - add gif for landing animation on first ball
   mode_base_started:
     widgets:
       - type: text
@@ -305,6 +332,7 @@ variable_player:
     playfield_bonus: 500
 
   # First loop, set the multiplier to 2x
+  # This is based on the counter defined in this file
   loop_done{count==1}:
     pf_multiplier:
       int: 2
@@ -322,9 +350,12 @@ variable_player:
 
   # Ball start reset
   mode_base_started:
+    # Reset multiplier to 1
     pf_multiplier:
       int: 1
       action: set
+    # Reset playfield_bonus to 0
+    # TODO - Add a mechanism for holding a bonus
     playfield_bonus:
       int: 0
       action: set

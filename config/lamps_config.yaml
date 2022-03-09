@@ -1,9 +1,12 @@
 #config_version=5
 
-# GI will be hardwired to 5v
-# Inserts will be RGB led strands
+# Lamp configuration
+# Author - Michael Latiolais
+# Playfield GI is hardwired to 5v
+# Backbox GI is hardwired to AC voltage
+# Inserts will be RGB led strands connected on line 1
 lights:
-  # Neopixel line 0
+  # Neopixel line 1
   l_top_right_200:
     number: 1-0-0
     subtype: led

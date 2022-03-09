@@ -1,4 +1,8 @@
 #show_version=5
+# Attract mode light show
+# Author - Michael Latiolais
+
+# Just flipping all of the lamps between red, blue and green
 - duration: .1
   lights:
     l_top_right_200: red
