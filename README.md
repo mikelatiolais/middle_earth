@@ -1,6 +1,7 @@
 # Middle Earth Config
 
 This is a rework of an Atari Middle Earth pinball machine.
+Author and initial hardware work: Michael Latiolais
 Activites:
 - Rewire playfield
 - New controller/power system
