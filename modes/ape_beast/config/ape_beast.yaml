@@ -26,7 +26,7 @@ counters:
     starting_count: (20 * (current_player.ape_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
-    events_when_complete: ape_beast_timeout
+    events_when_complete: ape_beast_complete
 
 timers:
     ape_attack_timer:

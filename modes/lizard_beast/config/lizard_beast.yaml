@@ -7,7 +7,7 @@
 # TODO - Add timer
 # TODO - Add counter for spinner hits
 mode:
-  start_events: drop_target_bank_upper_bank_down
+  start_events: drop_target_bank_lower_bank_down
   stop_events: lizard_beast_timeout, lizard_beast_complete
   priority: 200
 
