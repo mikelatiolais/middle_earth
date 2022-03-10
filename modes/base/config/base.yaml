@@ -195,7 +195,12 @@ sound_player:
     ball_saved_voice:
       volume: 1
       loops: 0
-    
+
+  # Successful ape mode
+  ape_beast_complete:
+    well_done_voice:
+      volume: 1
+      loops: 0
 
 slide_player:
   # Main display
@@ -363,12 +368,11 @@ variable_player:
   # Attack mode scoring
   ape_beast_complete:
     score: 10000
-    action: set
+    ape_beast_mode_count: 1
 
   # Attack mode scoring
   lizard_beast_complete:
     score: 10000
-    action: set
 
 
 shot_profiles:
