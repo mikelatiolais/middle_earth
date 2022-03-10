@@ -8,7 +8,7 @@
 # TODO - Add counter for spinner hits
 mode:
   start_events: drop_target_bank_upper_bank_down
-  stop_events: drop_target_bank_upper_bank_up
+  stop_events: ape_beast_timeout, ape_beast_complete
   priority: 200
 
 variable_player:
@@ -18,3 +18,33 @@ sound_player:
     attack_is_imminent_voice:
       volume: 1
       loops: 0
+
+counters:
+  ape_beast_attack:
+    count_events: sw_spinner_active
+    events_when_hit: ape_attacked
+    starting_count: (20 * (current_player.ape_beast_mode_count + 1))
+    count_complete_value: 0
+    direction: down
+    events_when_complete: ape_beast_complete
+
+
+
+slide_player:
+  mode_base_started:
+    - duration: 2s
+    slides:
+      slide_tfr_logo:
+        widgets:
+        - type: image
+          image: ape_beast
+          scale: .25
+    widgets:
+      - type: text
+        text: (device.counters.test_counter.value)
+        number_grouping: true
+        min_digits: 2
+        font_name: Greenscr
+        font_size: 100
+        color: green
+

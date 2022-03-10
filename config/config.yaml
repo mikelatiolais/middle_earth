@@ -89,12 +89,6 @@ keyboard:   #use to drive your game from the computer for testing
 
 
 player_vars:
-  current_mode:
-    initial_value: Landing
-    value_type: str
-  total_mode_complete:
-    initial_value: 0
-    value_type: int
   total_bumper_hits:
     initial_value: 0
     value_type: int
@@ -104,11 +98,24 @@ player_vars:
   total_drop_complete:
     initial_value: 0
     value_type: int
+ 
+  # Playfield bonus and multiplier
   playfield_bonus:
     initial_value: 0
     value_type: int
   pf_multiplier:
     initial_value: 1
+    value_type: int
+
+  # Mode count variables
+  total_mode_complete:
+    initial_value: 0
+    value_type: int
+  ape_beast_mode_count:
+    initial_value: 0
+    value_type: int
+  lizard_beast_mode_count:
+    initial_value: 0
     value_type: int
 
 displays:
