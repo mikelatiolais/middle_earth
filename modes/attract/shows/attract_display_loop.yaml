@@ -61,6 +61,14 @@
       - type: image
         image: tfr_2020
         scale: .25
+# The Little Flippers logo
+- duration: 2s
+  slides:
+    slide_lf_logo:
+      widgets:
+      - type: image
+        image: lf_logo 
+        scale: .5
 # The Presents slide
 - duration: 2s
   slides:
@@ -74,13 +82,13 @@
         anchor_y: center
         x: center
         y: top-50
-# The Little Flippers logo
-- duration: 2s
+# Middle Earth 2.0 logo
+- duration: 3s
   slides:
     slide_lf_logo:
       widgets:
       - type: image
-        image: lf_logo 
+        image: middle_earth_1
         scale: .5
 # High scores
 # currently also shows the loop champion, though there is no counter for it in the game yet
