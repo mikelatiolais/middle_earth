@@ -89,7 +89,7 @@
       widgets:
       - type: image
         image: middle_earth_1
-        scale: .5
+        scale: 1
 # High scores
 # currently also shows the loop champion, though there is no counter for it in the game yet
 - duration: 3s

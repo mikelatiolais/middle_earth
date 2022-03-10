@@ -44,13 +44,6 @@ timers:
 
 slide_player:
   mode_ape_beast_started:
-    - duration: 2s
-    slides:
-      slide_ape_beast:
-        widgets:
-        - type: image
-          image: ape_beast
-          scale: .25
     widgets:
       - type: text
         text: (device.counters.ape_beast_attack.value)

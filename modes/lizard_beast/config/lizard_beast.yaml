@@ -44,13 +44,6 @@ timers:
 
 slide_player:
   mode_lizard_beast_started:
-    - duration: 2s
-    slides:
-      slide_lizard_beast:
-        widgets:
-        - type: image
-          image: lizard_beast
-          scale: .25
     widgets:
       - type: text
         text: (device.counters.lizard_beast_attack.value)
