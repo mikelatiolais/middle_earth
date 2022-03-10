@@ -117,6 +117,9 @@ player_vars:
   lizard_beast_mode_count:
     initial_value: 0
     value_type: int
+  ape_counter:
+    initial_value: 0
+    value_type: int
 
 displays:
   window:
