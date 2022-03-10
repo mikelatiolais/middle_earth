@@ -45,7 +45,7 @@ timers:
             event: ape_beast_timeout
 
 slide_player:
-  mode_ape_beast_started:
+  show_slide:
     widgets:
       - type: text
         text: Spinner Hits Remaining (player|ape_counter)
