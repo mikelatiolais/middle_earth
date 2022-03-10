@@ -10,10 +10,14 @@ mode:
   priority: 200
 
 variable_player:
-  logicblock_ape_beast_attack_updated:
+  mode_ape_beast_started:
     ape_beast_attack_count:
       action: set
-      int: value
+      int: (20 * (current_player.ape_beast_mode_count + 1))
+  ape_attacked:
+    ape_beast_attack_count:
+      action: set
+      int: (20 * (current_player.ape_beast_mode_count + 1))
 
 sound_player:
   mode_ape_beast_started:
