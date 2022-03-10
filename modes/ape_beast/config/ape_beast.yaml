@@ -12,6 +12,10 @@ mode:
   priority: 200
 
 variable_player:
+  counter_ape_beast_attack_hit:
+    ape_counter:
+      action: set
+      int: (count)
 
 sound_player:
   mode_ape_beast_started:
@@ -31,7 +35,7 @@ counters:
 timers:
     ape_attack_timer:
         debug: True
-        start_value: (30 + (current_player.ape_beast_mode_count * 10))
+        start_value: (10 + (current_player.ape_beast_mode_count * 10))
         end_value: 0
         direction: down
         tick_interval: 1s
@@ -46,7 +50,7 @@ slide_player:
   mode_ape_beast_started:
     widgets:
       - type: text
-        text: Spinner Hits Remaining (player|ape_beast_attack)
+        text: Spinner Hits Remaining (player|ape_counter)
         number_grouping: true
         min_digits: 2
         font_name: Greenscr
