@@ -26,25 +26,38 @@ counters:
     starting_count: (20 * (current_player.ape_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
-    events_when_complete: ape_beast_complete
+    events_when_complete: ape_beast_timeout
 
-
+timers:
+    ape_attack_timer:
+        debug: True
+        start_value: (30 + (current_player.ape_beast_mode_count * 10))
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: yes
+        control_events:
+          - action: start
+            event: mode_ape_beast_started
+          - action: stop 
+            event: ape_beast_timeout
 
 slide_player:
-  mode_base_started:
+  mode_ape_beast_started:
     - duration: 2s
     slides:
-      slide_tfr_logo:
+      slide_ape_beast:
         widgets:
         - type: image
           image: ape_beast
           scale: .25
     widgets:
       - type: text
-        text: (device.counters.test_counter.value)
+        text: (device.counters.ape_beast_attack.value)
         number_grouping: true
         min_digits: 2
         font_name: Greenscr
         font_size: 100
-        color: green
+        color: red
+
 

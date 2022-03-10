@@ -360,6 +360,17 @@ variable_player:
       int: 0
       action: set
 
+  # Attack mode scoring
+  ape_beast_complete:
+    score: 10000
+    action: set
+
+  # Attack mode scoring
+  lizard_beast_complete:
+    score: 10000
+    action: set
+
+
 shot_profiles:
   base_standup_targets:
     states:

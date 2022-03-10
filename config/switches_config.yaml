@@ -23,6 +23,7 @@ switches:
   s_start_button:
     number: 3-0-21
     tags: start
+    ignore_window_ms: 100
   s_tilt_bob:
     number: 3-0-22
     tags: tilt_warning

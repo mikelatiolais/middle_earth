@@ -1,10 +1,63 @@
 #config_version=5
+
+# Lizard Beast attack mode
+# Author - Michael Latiolais
+
+# Starts with dropping the upper bank
+# TODO - Add timer
+# TODO - Add counter for spinner hits
 mode:
-  start_events: drop_target_bank_lower_bank_down
-  stop_events: drop_target_bank_lower_bank_up
+  start_events: drop_target_bank_upper_bank_down
+  stop_events: lizard_beast_timeout, lizard_beast_complete
   priority: 200
 
-
 variable_player:
-  s_behind_drops_active:
-    score: 2000
+
+sound_player:
+  mode_lizard_beast_started:
+    attack_is_imminent_voice:
+      volume: 1
+      loops: 0
+
+counters:
+  lizard_beast_attack:
+    count_events: sw_bumper_active
+    events_when_hit: lizard_attacked
+    starting_count: (20 * (current_player.lizard_beast_mode_count + 1))
+    count_complete_value: 0
+    direction: down
+    events_when_complete: lizard_beast_timeout
+
+timers:
+    lizard_attack_timer:
+        debug: True
+        start_value: (30 + (current_player.lizard_beast_mode_count * 10))
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: yes
+        control_events:
+          - action: start
+            event: mode_lizard_beast_started
+          - action: stop 
+            event: lizard_beast_timeout
+
+slide_player:
+  mode_lizard_beast_started:
+    - duration: 2s
+    slides:
+      slide_lizard_beast:
+        widgets:
+        - type: image
+          image: lizard_beast
+          scale: .25
+    widgets:
+      - type: text
+        text: (device.counters.lizard_beast_attack.value)
+        number_grouping: true
+        min_digits: 2
+        font_name: Greenscr
+        font_size: 100
+        color: red
+
+
