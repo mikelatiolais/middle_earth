@@ -46,11 +46,11 @@ slide_player:
   mode_lizard_beast_started:
     widgets:
       - type: text
-        text: (device.counters.lizard_beast_attack.value)
+        text: Pop Hits Remaining (machine|lizard_beast_attack)
         number_grouping: true
         min_digits: 2
         font_name: Greenscr
-        font_size: 100
+        font_size: 30
         color: red
 
 
