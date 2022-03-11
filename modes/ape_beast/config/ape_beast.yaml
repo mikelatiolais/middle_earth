@@ -48,7 +48,7 @@ slide_player:
   mode_ape_beast_started:
     widgets:
       - type: text
-        text: "Spinner Hits Remaining (player|ape_counter)"
+        text: "Spinner Hits Remaining (ape_counter)"
         number_grouping: true
         font_name: Greenscr
         font_size: 30
