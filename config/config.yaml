@@ -120,6 +120,9 @@ player_vars:
   ape_counter:
     initial_value: 0
     value_type: int
+  lizard_counter:
+    initial_value: 0
+    value_type: int
 
 displays:
   window:
