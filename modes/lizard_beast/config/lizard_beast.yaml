@@ -8,7 +8,7 @@
 # TODO - Add counter for spinner hits
 mode:
   start_events: drop_target_bank_lower_bank_down
-  stop_events: lizard_beast_timeout, lizard_beast_complete
+  stop_events: timer_lizard_attack_timer_complete, lizard_beast_complete
   priority: 200
 
 variable_player:
@@ -19,7 +19,7 @@ variable_player:
   mode_lizard_beast_started:
     lizard_counter:
       action: set
-      int: (20 * (current_player.lizard_beast_mode_count + 1))
+      int: (15 * (current_player.lizard_beast_mode_count + 1))
 
 
 sound_player:
@@ -31,24 +31,23 @@ sound_player:
 counters:
   lizard_beast_attack:
     count_events: sw_bumper_active
-    starting_count: (20 * (current_player.lizard_beast_mode_count + 1))
+    starting_count: (15 * (current_player.lizard_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
-    events_when_complete: lizard_beast_timeout
+    events_when_complete: lizard_beast_complete
 
 timers:
     lizard_attack_timer:
         debug: True
-        start_value: (30 + (current_player.lizard_beast_mode_count * 10))
+        start_value: 30
         end_value: 0
         direction: down
         tick_interval: 1s
-        start_running: yes
         control_events:
           - action: start
             event: mode_lizard_beast_started
           - action: stop 
-            event: lizard_beast_timeout
+            event: lizard_beast_complete
 
 slide_player:
   mode_lizard_beast_started:
