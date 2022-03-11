@@ -24,7 +24,6 @@ sound_player:
 counters:
   ape_beast_attack:
     count_events: sw_spinner_active
-    events_when_hit: ape_attacked
     starting_count: (20 * (current_player.ape_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
