@@ -6,7 +6,7 @@
 # Starts with dropping the upper bank
 mode:
   start_events: drop_target_bank_upper_bank_down
-  stop_events: ape_beast_timeout, ape_beast_complete
+  stop_events: timer_ape_beast_timer_complete, ape_beast_complete
   priority: 200
 
 variable_player:
@@ -40,12 +40,9 @@ timers:
         end_value: 0
         direction: down
         tick_interval: 1s
-        start_running: yes
         control_events:
           - action: start
             event: mode_ape_beast_started
-          - action: stop 
-            event: ape_beast_timeout
 
 slide_player:
   mode_ape_beast_started:

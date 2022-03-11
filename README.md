@@ -2,6 +2,10 @@
 
 This is a rework of an Atari Middle Earth pinball machine.
 Author and initial hardware work: Michael Latiolais
+Middle Earth Logo: Tyler Latiolais
+The Flipper Room Logo:
+Little Flippers Logo:
+
 Activites:
 - Rewire playfield
 - New controller/power system
