@@ -1,10 +1,10 @@
 Modes
 - Dino Beast
-  -- 2 Left/ 2 Right Stand-Up targets to Qualify
-  -- 5 main star rollovers start to blink (outlane and extra ball inlane rollovers not included)
-  -- Hit 5 blinking star rollovers to complete mode
-  -- Skill shot immediately starts Dino mode
-    -- Skill shot is made by making the star rollover on the Dinosaur chest as the first switch
+  - 2 Left/ 2 Right Stand-Up targets to Qualify
+  - 5 main star rollovers start to blink (outlane and extra ball inlane rollovers not included)
+  - Hit 5 blinking star rollovers to complete mode
+  - Skill shot immediately starts Dino mode
+  - Skill shot is made by making the star rollover on the Dinosaur chest as the first switch
 after plunge.
 
 - Lizard Beast
