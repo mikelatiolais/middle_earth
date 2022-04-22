@@ -373,6 +373,7 @@ variable_player:
   # Attack mode scoring
   lizard_beast_complete:
     score: 10000
+    lizard_beast_mode_count: 1
 
 
 shot_profiles:

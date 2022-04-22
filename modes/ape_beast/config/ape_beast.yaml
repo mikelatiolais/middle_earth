@@ -3,36 +3,43 @@
 # Ape Beast attack mode
 # Author - Michael Latiolais
 
-# Starts with dropping the upper bank
+# Starts with dropping the lower bank
 mode:
-  start_events: drop_target_bank_upper_bank_down
+  start_events: drop_target_bank_lower_bank_down
   stop_events: timer_ape_attack_timer_complete, ape_beast_complete
   priority: 200
 
+
 variable_player:
+  # Set the display variable equal to the counter
   counter_ape_beast_attack_hit:
     ape_counter:
       action: set
       int: (count)
+  # Set the initial value of the display variable
   mode_ape_beast_started:
     ape_counter:
       action: set
-      int: (20 * (current_player.ape_beast_mode_count + 1))
+      int: (15 * (current_player.ape_beast_mode_count + 1))
 
+# Play the attack is imminent call out
 sound_player:
   mode_ape_beast_started:
     attack_is_imminent_voice:
       volume: 1
       loops: 0
 
+# A counter which counts down the bumper hits required to complete the mode
 counters:
   ape_beast_attack:
-    count_events: sw_spinner_active
-    starting_count: (20 * (current_player.ape_beast_mode_count + 1))
+    count_events: sw_bumper_active
+    starting_count: (15 * (current_player.ape_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
     events_when_complete: ape_beast_complete
 
+# A timer which ends the mode when it completes
+# It starts at 30 seconds and ticks downward
 timers:
     ape_attack_timer:
         debug: True
@@ -46,12 +53,14 @@ timers:
           - action: stop
             event: ape_beast_complete
 
+# The display for the ape mode
 slide_player:
   mode_ape_beast_started:
     widgets:
       - type: text
-        text: "Spinner Hits Remaining (ape_counter)"
+        text: Pop Hits Remaining (ape_counter)
         number_grouping: true
+        min_digits: 2
         font_name: Greenscr
         font_size: 30
         color: red

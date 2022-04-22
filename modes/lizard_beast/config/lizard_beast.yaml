@@ -4,38 +4,40 @@
 # Author - Michael Latiolais
 
 # Starts with dropping the upper bank
-# TODO - Add timer
-# TODO - Add counter for spinner hits
 mode:
-  start_events: drop_target_bank_lower_bank_down
+  start_events: drop_target_bank_upper_bank_down
   stop_events: timer_lizard_attack_timer_complete, lizard_beast_complete
   priority: 200
 
 variable_player:
+  # Set the display variable equal to the counter
   counter_lizard_beast_attack_hit:
     lizard_counter:
       action: set
       int: (count)
+  # Set the initial value of the display variable
   mode_lizard_beast_started:
     lizard_counter:
       action: set
-      int: (15 * (current_player.lizard_beast_mode_count + 1))
+      int: (20 * (current_player.lizard_beast_mode_count + 1))
 
-
+# Play the attack is imminent call out
 sound_player:
   mode_lizard_beast_started:
     attack_is_imminent_voice:
       volume: 1
       loops: 0
-
+# A counter which counts down the spinner hits required to complete the mode
 counters:
   lizard_beast_attack:
-    count_events: sw_bumper_active
-    starting_count: (15 * (current_player.lizard_beast_mode_count + 1))
+    count_events: sw_spinner_active
+    starting_count: (20 * (current_player.lizard_beast_mode_count + 1))
     count_complete_value: 0
     direction: down
     events_when_complete: lizard_beast_complete
 
+# A timer which ends the mode when it completes
+# It starts at 30 seconds and ticks downward
 timers:
     lizard_attack_timer:
         debug: True
@@ -49,11 +51,12 @@ timers:
           - action: stop 
             event: lizard_beast_complete
 
+# The display for the ape mode
 slide_player:
   mode_lizard_beast_started:
     widgets:
       - type: text
-        text: Pop Hits Remaining (lizard_counter)
+        text: Spinner Hits Remaining (lizard_counter)
         number_grouping: true
         min_digits: 2
         font_name: Greenscr
