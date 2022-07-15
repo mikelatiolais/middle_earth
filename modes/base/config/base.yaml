@@ -14,6 +14,8 @@ ball_saves:
     active_time: 8s
     hurry_up_time: 3s
     grace_period: 2s
+    # Since we lack a switch in the playfield trough to start the ball save countdown, we need to use playfield switches
+    # So, once one of these switch groups are hit, the timer starts
     timer_start_events: sw_playfield_active, sw_bumper_active, sw_standup_active, sw_rollover_active
     auto_launch: true
     balls_to_save: 1
@@ -68,13 +70,17 @@ show_player:
     ball_save: stop
 
   # Bonus lamp system
-  # First loop, light double bonus
+  # First loop, flash double bonus
+  # TODO
+  # Second loop, light double bonus
   # This is based on the counter defined in this file
   loop_done{count==1}:
     bonus_lamp_on:
       show_tokens:
         led1: l_double_bonus
-  # Second loop, turn off bonus lamps and light triple
+  # Third loop, keep double on and flash triple
+  # TODO
+  # Fourth loop, turn off bonus lamps and light triple
   loop_done{count==2}:
     bonus_lamps_off:
       show_tokens:
@@ -83,7 +89,9 @@ show_player:
     bonus_lamp_on:
       show_tokens:
         led1: l_triple_bonus
-  # Third loop, light both bonus lamps
+  # Fifth loop, flash both bonus lamps
+  # TODO
+  # Sixth loop, light both bonus lamps
   loop_done{count==3}:
     bonus_both_lamps_on:
       show_tokens:
@@ -164,25 +172,6 @@ sound_player:
   # First tilt warning
   sw_tilt_warning_active: warning_voice
 
-  # drop target 
-  #mode_bottom_drop_complete_started:
-  #  danger:
-  #    volume: 0.25
-  #    loops: 0
-  #    fade_out: 0.0
-  #drop_target_bank_lower_bank_up:
-  #  danger:
-  #    action: stop
-
-  #mode_top_drop_complete_started:
-  #  danger:
-  #    volume: 0.25
-  #    loops: 0
-  #    fade_out: 0.0
-  #drop_target_bank_upper_bank_up:
-  #  danger:
-  #    action: stop
-
   # Initial voice over
   # TODO - change this to only run on ball 1
   mode_base_started:
@@ -235,6 +224,7 @@ slide_player:
 
 
 variable_player:
+  # This section is where the value of the switches are set for scoring
   # Lower playfield
   s_left_sling_active:
     score: (20 * current_player.pf_multiplier)
@@ -336,19 +326,19 @@ variable_player:
   shot_bonus_standup_hit:
     playfield_bonus: 500
 
-  # First loop, set the multiplier to 2x
+  # Second loop, set the multiplier to 2x
   # This is based on the counter defined in this file
-  loop_done{count==1}:
+  loop_done{count==2}:
     pf_multiplier:
       int: 2
       action: set
-  # Second loop, set it to 2x
-  loop_done{count==2}:
+  # Fourth loop, set it to 3x
+  loop_done{count==4}:
     pf_multiplier:
       int: 3
       action: set
-  # Third loop, set it to 6x
-  loop_done{count==3}:
+  # Sixth loop, set it to 6x
+  loop_done{count==6}:
     pf_multiplier:
       int: 6
       action: set

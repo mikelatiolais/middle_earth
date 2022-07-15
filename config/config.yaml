@@ -3,6 +3,8 @@
 # Middle Earth Cobrapin Config
 # Primary programmer: Michael Latiolais
 
+# This section defines the type of hardware used to control the game.
+# In this case, since we are using a cobrapin, it is opp, gen2
 hardware:
   platform: opp
   driverboards: gen2
@@ -11,68 +13,48 @@ hardware:
 opp:
   #Use the USB ports defined by your OS for the two STM32 boards
   ports: /dev/ttyACM0, /dev/ttyACM1, /dev/ttyACM2
-  #USING SERIAL NUMBERS INSTEAD OF CHAINS
-  #  Board 0 has serial number 0, Board 1 has serial number 1.
-  #  This is convenient if your OS tends to reassign the serial port.
-  #  MPF will automatically address the correct board even if the ports
-  #     are swapped.
-
-  #For multiple CobraPin boards in a game, you will either have to give 
-  #  the STM32 boards on the second CobraPin board new serial numbers 
-  #  (10 and 11 are suggested for the 2nd board since 2 is used by the 
-  #  CobraPin Xpansion Board) 
-  #  <OR> Use the chains section to assign a port to a board number. 
-  #  Mixing these up could cause blown FETs, coils, and fuses. Proceed 
-  #  with caution. Test without coil power and use the yellow coil LEDs 
-  #  for feedback.
-  #chains:
-     #0: /dev/ttyACM0
-     #1: /dev/ttyACM1
-     #3: /dev/ttyACM2
-
 
 psus:
   default:
-    #Gives the capacitors extra time to recharge after firing a coil
-    #  and eases the load on the power supply. Doesn't affect autofire
-    #  devices like flippers, pops, slings.
+    # Gives the capacitors extra time to recharge after firing a coil
+    # and eases the load on the power supply. Doesn't affect autofire
+    # devices like flippers, pops, slings.
     release_wait_ms: 50   
 
 
-#One giant config file can get difficult to manage. You can put any of 
-#  these config sections in its own yaml file and link to it with the 
-#  config section here      
+# One giant config file can get difficult to manage. You can put any of 
+# these config sections in its own yaml file and link to it with the 
+# config section here      
 config:
   - switches_config.yaml
   - coils_config.yaml
   - lamps_config.yaml
   - device_config.yaml
 
+# This section defines the elements of the machine
 machine:
-  balls_installed: 1 #How many balls are physically in your game
-  min_balls: 1 #How few balls can be accounted for before you can start a game
+  balls_installed: 1 # How many balls are physically in your game
+  min_balls: 1 # How few balls can be accounted for before you can start a game
 
+# This section defines some of the basics of the game
 game:
   balls_per_game: 3
   max_players: 4
 
+# MPF works primarily through modes. Each mode is defined in a separate directory under the modes directory
 modes:
   #Add all your mode names here
   - attract
   - base
   - service
   - high_score
-  #- top_drop_complete
-  #- bottom_drop_complete
   - bonus
   - tilt
   #- match
   - lizard_beast
   - ape_beast
-  #- escape
-  #- etc
 
-
+# This section is not used at this point
 keyboard:   #use to drive your game from the computer for testing
   s:
     switch: s_start_button
@@ -87,14 +69,17 @@ keyboard:   #use to drive your game from the computer for testing
   #"/":
   #  switch: s_right_eos
 
-
+# This section holds variables that are used to store values specific to a player
 player_vars:
+  # Total number of all bumper hits
   total_bumper_hits:
     initial_value: 0
     value_type: int
+  # Total number of all spinner hits
   total_spinner_hits:
     initial_value: 0
     value_type: int
+  # Total number of drop target completions
   total_drop_complete:
     initial_value: 0
     value_type: int
@@ -124,11 +109,13 @@ player_vars:
     initial_value: 0
     value_type: int
 
+# This defines the properties of the apron display
 displays:
   window:
     width: 800
     height: 600
 
+# This defines the sound system
 sound_system:
   tracks:
     voice:
@@ -145,6 +132,7 @@ sound_system:
       volume: 0.5
       simultaneous_sounds: 1
 
+# This is also part of the sound system 
 assets:
   sounds:
     default:
@@ -156,16 +144,19 @@ assets:
     voice:
       track: voice
 
+# This is the sound player that sets up the initial music
 sound_player:
   mode_base_started:
     main_theme:
       loops: -1
       start_at: 21.40
 
+  # If the mode is stopped, stop the music
   mode_base_stopped:
     main_theme:
       action: stop
 
+# Properties of widgets used in every mode
 # in your machine wide config file
 widget_styles:
   attract_mode_high_score_display_label:
@@ -208,6 +199,7 @@ widget_styles:
     adjust_top: 2
     adjust_bottom: 3
 
+# When certain events happen, we want to disable and enable solenoids.
 event_player:
   ball_starting:
     - cmd_flippers_enable
