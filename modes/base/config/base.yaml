@@ -50,6 +50,15 @@ shows:
         (led1): off
         (led2): off
 
+  # NEW
+  bonux_lamp_qualify:
+    - time: 0
+      lights:
+        (led1): white
+    - time: +1
+      lights:
+        (led1): off
+
 show_player:
   # Ball save lamp show
   ball_save_bs_base_timer_start:
@@ -70,18 +79,27 @@ show_player:
     ball_save: stop
 
   # Bonus lamp system
-  # First loop, flash double bonus
-  # TODO
-  # Second loop, light double bonus
   # This is based on the counter defined in this file
+  # First loop, flash double bonus
   loop_done{count==1}:
+    bonus_lamp_qualify:
+      show_tokens:
+        led1: l_double_bonus
+  # Second loop, light double bonus
+  loop_done{count==2}:
     bonus_lamp_on:
       show_tokens:
         led1: l_double_bonus
   # Third loop, keep double on and flash triple
-  # TODO
+  loop_done{count==3}:
+    bonus_lamp_on:
+      show_tokens:
+        led1: l_double_bonus
+    bonus_lamp_qualify:
+      show_tokens:
+        led1: l_triple_bonus
   # Fourth loop, turn off bonus lamps and light triple
-  loop_done{count==2}:
+  loop_done{count==4}:
     bonus_lamps_off:
       show_tokens:
         led1: l_double_bonus
@@ -90,9 +108,15 @@ show_player:
       show_tokens:
         led1: l_triple_bonus
   # Fifth loop, flash both bonus lamps
-  # TODO
+  loop_done{count==5}:
+    bonus_lamp_qualify:
+      show_tokens:
+        led1: l_triple_bonus
+    bonus_lamp_qualify:
+      show_tokens:
+        led1: l_double_bonus
   # Sixth loop, light both bonus lamps
-  loop_done{count==3}:
+  loop_done{count==6}:
     bonus_both_lamps_on:
       show_tokens:
         led1: l_double_bonus
