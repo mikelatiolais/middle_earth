@@ -1,0 +1,68 @@
+#config_version=5
+
+# Skill shot mode
+# Author - Michael Latiolais
+
+mode:
+  start_events: ball_started
+  stop_events:
+    - skill_success
+    - skill_failed
+  priority: 500
+
+shots:
+  shot_skill_dino:
+    switch: s_left_upper_rollover
+    profile: skill_shot_profile
+    advance_events: mode_skill_shot_started
+    show_tokens:
+      light: l_50_left_rollover
+
+shot_profiles:
+  skill_shot_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: flashing
+        show: flash_color
+        show_tokens:
+          color: red
+        speed: 4
+      - name: lit
+        show: on
+    loop: true
+
+variable_player:
+  skill_success:
+    score: 500
+
+timers:
+  skill_shot_timeout:
+    start_value: 0
+    end_value: 15     # set the timeout of your skill shot here
+    direction: up
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - action: start
+        event: ball_started
+
+state_machines:
+  skill_shot_success:
+    debug: true
+    states:
+      start:
+        label: Skill shot ready
+      success:
+        label: Skill successful
+        events_when_started: skill_success
+      failed:
+        label: Skill failed
+        events_when_started: skill_failed
+    transitions:
+      - source: start
+        target: success
+        events: skill_shot_flashing_hit
+      - source: start
+        target: failed
+        events: skill_shot_unlit_hit, timer_skill_shot_timeout_complete

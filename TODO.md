@@ -24,7 +24,6 @@ after plunge.
   - TODO
 
 - Bonus Multiplier
-  - Not available or deactivated in Cat Beast mode (is this necessary?)
   - 1st loop lights the star rollover in the loop
   - 2nd loop multiplies the bonus (x2), lights the Double bonus light at loop and center of playfield, star rollover starts to blink
   - 3rd loop multiplies the bonus x3, lights the Triple Bonus light at scoop, Double bonus light blinks in groups of three, star rollover light in loop becomes unlit
